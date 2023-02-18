@@ -69,7 +69,7 @@ export async function getStaticPaths() {
                 params: { uuid : p.full_uuid.toString() }
             }
         )),
-        fallback: true
+        fallback: false
     }
 }
 
