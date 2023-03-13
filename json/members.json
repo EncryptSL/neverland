@@ -64,7 +64,16 @@
     {
         "username": "Mathew_Klusik",
         "uuid": "4e4e591a-68b1-4922-8060-af851514c642",
-        "description": "Member in Trial Period",
+        "description": "Member",
+        "twitch": "#",
+        "youtube": "#",
+        "instagram": "#",
+        "donate": "#"
+    },
+    {
+        "username": "ZombCatMan",
+        "uuid": "24843abe-3ba7-47be-8d12-2c1128eaaeac",
+        "description": "Slovenský Kamoš",
         "twitch": "#",
         "youtube": "#",
         "instagram": "#",
