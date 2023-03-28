@@ -32,7 +32,7 @@ const PlayerPage = ({ player }) => {
                                     <div className="font-size-h3 font-w500">
                                         <span>{player?.blocks}</span>
                                     </div>
-                                    <p className="text-muted mt-2 mb-0">Položené bloky</p>
+                                    <p className="text-muted mt-2 mb-0">Zničené bloky</p>
                                 </div>
                                 <div className="col-4">
                                     <div className="font-size-h3 font-w500">
