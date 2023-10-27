@@ -1,7 +1,6 @@
 import React from "react";
-import { fs } from "fs";
 import { marked } from "marked";
-import { matter } from "gray-matter";
+import matter from "gray-matter";
 
 
 const SlugPage = ({ htmlString, data }) => {
@@ -25,6 +24,7 @@ const SlugPage = ({ htmlString, data }) => {
 };
 
 export const getStaticPaths = async () => {
+    const fs = require('fs');
     const files = fs.readdirSync("posts");
     const paths = files.map(filename => ({
       params: {
@@ -38,11 +38,9 @@ export const getStaticPaths = async () => {
   };
   
   export const getStaticProps = async ({ params: { slug } }) => {
-    const path = require('path');
-
-    const markdownWithMetadata = fs
-      .readFileSync(path.join("posts", slug + ".md"))
-      .toString();
+    const fs = require('fs');
+    const path = require("path")
+    const markdownWithMetadata = fs.readFileSync(path.join("posts", slug + ".md"));
   
     const parsedMarkdown = matter(markdownWithMetadata);
   
