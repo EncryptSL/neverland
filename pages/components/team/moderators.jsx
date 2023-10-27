@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import team from "/json/admins.json"
-import Utils from "../utils/Utils";
 import useSWR from "swr";
 
 const fetcher = url => fetch(url).then(r => r.json())
@@ -26,7 +24,7 @@ const Moderators = () => {
                             <span className={"badge text-white " + record.badge_color}>{record.description}</span>
                         </div>
                         <div className="text-center">
-                            {Utils.socialButtons(record.instagram, "Instagram", "btn-secondary")}
+                            {socialButtons(record.instagram, "Instagram", "btn-secondary")}
                         </div>
                     </div>
                 </div>
@@ -36,6 +34,15 @@ const Moderators = () => {
             </div>
         </>
     )
+}
+
+function socialButtons(link, btnName, clazzName) {
+    if (link === undefined)
+        return ``
+    else if (link === "#")
+        return ``
+    else
+        return (<a className={"btn btn-sm m-1 " + clazzName} target="_blank" href={link} title={btnName} rel="noreferrer" role="button"><i className={"bi bi-" + btnName.toLowerCase()}></i></a>)
 }
 
 export default Moderators;

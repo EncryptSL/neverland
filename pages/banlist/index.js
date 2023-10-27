@@ -68,6 +68,14 @@ const Banlist = ({data}) => {
         </>
     )
 }
+function bansBadges($type) {
+    if ($type === "Zrušen")
+        return (<span className="badge bg-info">{$type}</span>)
+    else if ($type === "Permanentní")
+        return (<span className="badge bg-danger">{$type}</span>)
+    else 
+        return $type
+}
 export async function getStaticProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/banlist/`)
     const data = res.data
