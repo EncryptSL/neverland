@@ -1,5 +1,6 @@
-import Member from "/json/members.json"
+import Member from "/json/admins.json"
 import {React, useState, useEffect } from "react";
+import Status from "./status/status";
 import Image from "next/image";
 
 const Header = () => {
@@ -7,26 +8,26 @@ const Header = () => {
   const [image, setImage] = useState("")
 
   const getImage = () => {
-    let index = Math.floor(Math.random() * Member.length);
-    setImage(<Image className="avatar" priority src={"https://visage.surgeplay.com/bust/"+Member[index].uuid} width={250} height={250} alt={'rn-'+Member[index].username} title={Member[index].username}/>)
+    setImage(<Image className="avatar" priority src="/assets/header_figure.webp" width={350} height={350} alt="firuge" title="header_figure"/>)
   }
 
   useEffect(() => {
       getImage()
   }, [])
     return (
-    <section className="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <section className="bg-dark text-light p-5 p-lg-3 pt-lg-5 text-center text-sm-start">
         <div className="container">
           <div className="d-sm-flex align-items-center justify-content-between">
             <div>
               <h1>NeverLand <span className="text-warning">CZ/SK</span></h1>
               <p className="lead my-4">
-                Privátní whitelist server zaměřený na především survival/vanillu.
-                Server původně vytvořen pro zábavu od práce a kamarády kteří rádi tvoří něco pěkného společně.
+                Veřejný Minecraft server zaměřený na ekonomiku, semi-rpg a survival.
+                Věříme že zde najdete to co hledáte, a taky trochu pohody.
               </p>
             </div>
             <div>{image}</div>
           </div>
+          <Status />
         </div>
       </section>
     )

@@ -1,0 +1,80 @@
+'use-client';
+import React from "react";
+import Link from "next/link";
+import axios from "axios";
+import { useState, useEffect } from "react"
+import Image from "next/image";
+import Utils from "../components/utils/Utils";
+import Pagination from "../components/banlist/pagination";
+
+const Banlist = ({data}) => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageSize = 20;
+   
+    const onPageChange = (page) => {
+      setCurrentPage(page);
+    };
+
+    return (
+        <>
+            <section className="hero text-light p-5 p-lg-3 pt-lg-5 text-center default">
+                <div className="container">
+                    <h1 className="text-center">Banlist</h1>
+                </div>
+            </section>
+            <section className="p-5 container">
+                <div className="alert alert-primary" role="alert">
+                    <span>
+                        <i className="fa-solid fa-circle-info"></i> Pokud jsi byl zabanován neprávem podej si žádost na <Link className="link-offset-2 link-underline link-underline-opacity-0" href={"/#discord"}>Discord</Link>.
+                    </span>
+                </div>
+                <h1>Banlist</h1>
+
+                <table className="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">Hráč</th>
+                          <th scope="col">Admin</th>
+                          <th scope="col">Vyprší</th>
+                          <th scope="col">Stav</th>
+                          <th scope="col">Důvod</th>
+                          <th scope="col">Datum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data && data.bans.map(e => {
+                                return (
+                                    <tr key={e?.id}>
+                                        <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
+                                        <td><Image src={"https://visage.surgeplay.com/face/" + e?.banned_by_uuid} alt={e?.banned_by_name} title={e?.banned_by_name} width="24" height="24" /> {e?.banned_by_name}</td>
+                                        <td>{Utils.bansBadges(e?.expire)}</td>
+                                        <td>{e?.active}</td>
+                                        <td>{e?.reason}</td>
+                                        <td>{e?.created_at}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+                <Pagination
+                    items={data.query.total_bans} // 100
+                    currentPage={currentPage} // 1
+                    pageSize={pageSize} // 10
+                    onPageChange={onPageChange}
+                />
+            </section>
+        </>
+    )
+}
+export async function getStaticProps() {
+    const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/banlist/`)
+    const data = res.data
+   
+    return {
+      props: { data },
+    };
+};
+
+export default Banlist;

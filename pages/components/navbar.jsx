@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
         <div className="container">
-          <a href="/" className="navbar-brand">NEVERLAND CZ/SK | SEZÓNA 2</a>
+          <a href="/" className="navbar-brand">NEVERLAND CZ/SK</a>
     
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span className="navbar-toggler-icon"></span>
@@ -13,16 +13,19 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navmenu">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a href="/#history" className="nav-link">O SERVERU</a>
+                <a href="/#aboutserver" className="nav-link">O SERVERU</a>
               </li>
               <li className="nav-item">
-                <a href="/#faq" className="nav-link">FAQ</a>
+                <a href="/#adminteam" className="nav-link">ADMIN TÝM</a>
               </li>
               <li className="nav-item">
-                <a href="/#memberlist" className="nav-link">ČLENOVÉ</a>
+                <a href="/banlist" className="nav-link">BANLIST</a>
               </li>
               <li className="nav-item">
-                <a href="/#stats" className="nav-link">STATISTIKY</a>
+                <a href="/pravidla" className="nav-link">PRAVIDLA</a>
+              </li>
+              <li className="nav-item">
+                <a href="https://neverlandmc.craftingstore.net/" className="nav-link" target="_blank"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
               </li>
             </ul>
           </div>

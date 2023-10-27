@@ -1,4 +1,5 @@
 body::before {
+  font-family: 'Ubuntu', sans-serif!important;
   display: block;
   content: '';
   height: 60px;
@@ -6,103 +7,217 @@ body::before {
 .avatar {
   transform: scaleX(-1);
 }
+
+.error {
+  padding: 15rem!important;
+}
+
 @media (min-width: 768px) {
 .news-input {
   width: 50%;
 }
 }
-
-.vertical-timeline {
-width: 100%;
-position: relative;
-padding: 1.5rem 0 1rem;
-}
-
-.vertical-timeline::before {
-content: '';
-position: absolute;
-top: 0;
-left: 67px;
-height: 100%;
-width: 4px;
-background: #e9ecef;
-border-radius: .25rem;
-}
-
-.vertical-timeline-element {
-position: relative;
-margin: 0 0 1rem;
-}
-
-.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
-visibility: visible;
-animation: cd-bounce-1 .8s;
-}
-.vertical-timeline-element-icon {
-position: absolute;
-top: 0;
-left: 60px;
-}
-
-.vertical-timeline-element-icon .badge-dot-xl {
-box-shadow: 0 0 0 5px #fff;
-}
-
-.badge-dot-xl {
-width: 18px;
-height: 18px;
-position: relative;
-}
-.badge:empty {
-display: none;
-}
-
-
-.badge-dot-xl::before {
-content: '';
-width: 10px;
-height: 10px;
-border-radius: .25rem;
-position: absolute;
-left: 50%;
-top: 50%;
-margin: -5px 0 0 -5px;
-background: #fff;
-}
-
-.vertical-timeline-element-content {
-position: relative;
-margin-left: 90px;
-font-size: .8rem;
-}
-
-.vertical-timeline-element-content .timeline-title {
-font-size: .8rem;
-text-transform: uppercase;
-margin: 0 0 .5rem;
-padding: 2px 0 0;
-font-weight: bold;
-}
-
-.vertical-timeline-element-content .vertical-timeline-element-date {
-display: block;
-position: absolute;
-left: -90px;
-top: 0;
-padding-right: 10px;
-text-align: right;
-color: #adb5bd;
-font-size: .7619rem;
-white-space: nowrap;
-}
-
-.vertical-timeline-element-content:after {
-content: "";
-display: table;
-clear: both;
-}
 .member-background {
-  background-image: url(/assets/member-background.webp);
+  background-image: url(/assets/night.webp);
   background-size: cover;
   background-attachment: fixed;
+}
+
+.default {
+  padding: 40px 0!important;
+  background: url(/assets/thumbnail.webp) no-repeat top center;
+}
+
+.team-managers {
+  background: linear-gradient(to top, #e33a3a, #c1000088, #0000, #0000);
+  border: 0;
+}
+
+.team-admins {
+  background: linear-gradient(to top, #3a00e5, #3f35df88, #0000, #0000);
+  border: 0;
+}
+
+.team-moderators {
+  background: linear-gradient(to top, #03f918, #02ff7388, #0000, #0000);
+  border: 0;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+	font-weight: 400;
+	font-size: 47px;
+	text-shadow: 2px 1px 8px rgba(0, 0, 0, 0.6), 0 -1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.cover-me {
+  margin-top: 1rem!important;
+  margin-bottom: -3rem!important;
+}
+
+.status a {
+  margin-left: auto!important;
+}
+
+.status {
+  margin: auto;
+  width: 46.625rem;
+  max-width: 100%;
+  display: flex!important;
+  padding: 1.25rem 2rem;
+  background: #06994e;
+}
+
+.status-offline {
+  margin: auto;
+  width: 46.625rem;
+  max-width: 100%;
+  padding: 1.25rem 2rem;
+  background: #ad1313;
+  text-align: center!important;
+}
+
+button {
+  border: 0;
+  color: #fff;
+  background: #1c7316;
+  padding: .75rem 2rem;
+}
+button:hover {
+  background: #1ab10f;
+}
+
+@media(max-width: 768px) {
+  .status .d-flex {
+    justify-content: center;
+  }
+  .status {
+    display: block!important;
+    width: 95%;
+  }
+  .status-offline {
+    display: block!important;
+    width: 95%;
+    text-align: center;
+  }
+  .status button {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .status a {
+    display: block;
+  }
+}
+
+@media(max-width: 992px) {
+  .figure {
+      display:none;
+  }
+}
+
+@media(max-width: 768px) {
+  .discord-img {
+      display:none;
+  }
+}
+
+.discord-section {
+  background: #dde4f5;
+}
+
+.discord-section h1 {
+  font-size: 42;
+  text-transform: uppercase;
+}
+
+.discord-section .discord-img {
+  -webkit-animation: breathing 5s ease-out infinite normal;
+  animation: breathing 5s ease-out infinite normal;
+}
+
+.discord-section .button {
+  background-color: #7289da;
+  color: #ffff;
+}
+
+.discord-section .button:hover {
+  background: #667ac2;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.about-server .content {
+  margin: auto!important;
+}
+
+.about-server .content h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c6dff;
+}
+
+.content .server-stats {
+  text-align: center;
+}
+
+.content .server-stats .icon {
+  font-size: 50px;
+}
+
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 }
