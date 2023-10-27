@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image";
 import Utils from "../components/utils/Utils";
 import Pagination from "../components/banlist/pagination";
+import Vote from "../components/vote";
 
 const Banlist = ({data}) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -64,6 +65,8 @@ const Banlist = ({data}) => {
                     pageSize={pageSize} // 10
                     onPageChange={onPageChange}
                 />
+
+                <Vote />
             </section>
         </>
     )

@@ -1,6 +1,6 @@
 ---
 title: Pravidla
-description: "Pravidla"
+description: "Pravidla Minecraft Serveru"
 ---
 ## Informace
 1. Majitelé jako vlastníci serveru mají vyhrazené právo odepřít přístup na server komukoliv, jehož přítomnost může ohrozit bezpečí ostatních.

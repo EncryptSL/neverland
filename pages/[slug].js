@@ -10,7 +10,8 @@ const SlugPage = ({ htmlString, data }) => {
     <>
         <section className="hero text-light p-5 p-lg-3 pt-lg-5 text-center default">
             <div className="container">
-                <h1 className="text-center">{data.title}</h1>
+                <h1 className="display-5 fw-bold text-body-emphasis text.center">{data.title}</h1>
+                <p className="lead mb-4">{data.description}</p>
             </div>
         </section>
         <section className="p-5">

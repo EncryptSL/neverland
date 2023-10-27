@@ -1,6 +1,6 @@
 ---
 title: Jak se připojit
-description: "Jak se připojit"
+description: "Popis jak se k nám připojit"
 ---
 
  1. Pro připojení potřebuješ originální minecraft 
