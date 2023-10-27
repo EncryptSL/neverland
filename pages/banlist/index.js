@@ -4,7 +4,6 @@ import Link from "next/link";
 import axios from "axios";
 import { useState, useEffect } from "react"
 import Image from "next/image";
-import Utils from "../components/utils/Utils";
 import Pagination from "../components/banlist/pagination";
 
 const Banlist = ({data}) => {
@@ -48,7 +47,7 @@ const Banlist = ({data}) => {
                                     <tr key={e?.id}>
                                         <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
                                         <td><Image src={"https://visage.surgeplay.com/face/" + e?.banned_by_uuid} alt={e?.banned_by_name} title={e?.banned_by_name} width="24" height="24" /> {e?.banned_by_name}</td>
-                                        <td>{Utils.bansBadges(e?.expire)}</td>
+                                        <td>{bansBadges(e?.expire)}</td>
                                         <td>{e?.active}</td>
                                         <td>{e?.reason}</td>
                                         <td>{e?.created_at}</td>
