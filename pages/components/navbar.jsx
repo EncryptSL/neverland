@@ -25,7 +25,7 @@ const Navbar = () => {
                 <a href="/pravidla" className="nav-link">PRAVIDLA</a>
               </li>
               <li className="nav-item">
-                <a href="https://neverlandmc.craftingstore.net/" className="nav-link" target="_blank"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
+                <a href="https://platby.hostify.cz/82906" className="nav-link" target="_blank"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
               </li>
             </ul>
           </div>
