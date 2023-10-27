@@ -20,6 +20,7 @@ const SlugPage = ({ htmlString, data }) => {
             </div>
         </section>
     </>
+
   );
 };
 
