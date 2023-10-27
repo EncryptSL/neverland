@@ -1,4 +1,3 @@
-import Member from "/json/admins.json"
 import {React, useState, useEffect } from "react";
 import Status from "./status/status";
 import Image from "next/image";

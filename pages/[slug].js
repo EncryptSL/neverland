@@ -1,7 +1,7 @@
 import React from "react";
-import fs from "fs";
+import { fs } from "fs";
 import { marked } from "marked";
-import matter from "gray-matter";
+import { matter } from "gray-matter";
 
 
 const SlugPage = ({ htmlString, data }) => {
