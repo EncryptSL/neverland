@@ -1,0 +1,65 @@
+{
+
+    "management": [
+        {
+            "id": "5350",
+            "username": "Wzarek755",
+            "uuid": "8dd6b6cb-8de7-4091-884e-062c0d5c074f",
+            "description": "OWNER",
+            "badge_color": "text-bg-danger",
+            "instagram": "#"
+        },
+        {
+            "id": "8915",
+            "username": "EncryptSL",
+            "uuid": "0ba5241b-e841-4908-8da4-e8bec9a8f902",
+            "description": "DEVELOPER",
+            "badge_color": "text-bg-warning",
+            "instagram": "#"
+        },
+        {
+            "id": "1676",
+            "username": "a_patress_o",
+            "uuid": "5fda563e-3f43-4001-9707-415dfbf28287",
+            "description": "ADMIN",
+            "badge_color": "text-bg-primary",
+            "instagram": "#"
+        }
+    ],
+    "admins": [
+        {
+            "id": "4088",
+            "username": "Pozice není obsazena",
+            "uuid": "MHF_Question",
+            "description": "ADMIN",
+            "badge_color": "text-bg-primary",
+            "instagram": "#"
+        },
+        {
+            "id": "8442",
+            "username": "Pozice není obsazena",
+            "uuid": "MHF_Question",
+            "description": "ADMIN",
+            "badge_color": "text-bg-primary",
+            "instagram": "#"
+        }
+    ],
+    "moderators": [
+        {
+            "id": "2837",
+            "username": "Pozice není obsazena",
+            "uuid": "MHF_Question",
+            "description": "Moderátor",
+            "badge_color": "text-bg-success",
+            "instagram": "#"
+        },
+        {
+            "id": "4336",
+            "username": "Pozice není obsazena",
+            "uuid": "MHF_Question",
+            "description": "Moderátor",
+            "badge_color": "text-bg-success",
+            "instagram": "#"
+        }
+    ]
+}
