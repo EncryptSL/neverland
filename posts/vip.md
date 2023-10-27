@@ -82,5 +82,9 @@ description: Seznam výhod jednotlivých balíčků
       <td colspan="2">✔️</td>
     </tr>
   </tbody>
-
 </table>
+
+<div class="text-end">
+  <p class="lead">Toto tlačítko váš přesměruje na platební bránu*</p>
+  <a class="btn btn-lg btn-success" href="https://platby.hostify.cz/82906" target="_blank">JÍT KOUPIT</a>
+</div>

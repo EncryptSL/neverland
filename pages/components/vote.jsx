@@ -18,7 +18,7 @@ const Vote = () => {
         <section id="vote" className="p-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4 d-flex">
+                <div className="col-md-4">
                         <form className="flex flex-col" method="post" onSubmit={submitVote}>
                             <label htmlFor="service">Kde chceš Hlasovat</label>
                               <select className="form-select" name="service" aria-label="service" required>

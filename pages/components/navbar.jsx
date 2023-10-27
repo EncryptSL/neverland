@@ -16,16 +16,20 @@ const Navbar = () => {
                 <a href="/#aboutserver" className="nav-link">O SERVERU</a>
               </li>
               <li className="nav-item">
-                <a href="/#adminteam" className="nav-link">ADMIN TÝM</a>
+                <a href="/#vote" className="nav-link">HLASOVÁNÍ</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  OSTATNÍ
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/#adminteam">ADMIN TÝM</a></li>
+                  <li><a class="dropdown-item" href="/banlist">BANLIST</a></li>
+                  <li><a class="dropdown-item" href="/pravidla">PRAVIDLA</a></li>
+                </ul>
               </li>
               <li className="nav-item">
-                <a href="/banlist" className="nav-link">BANLIST</a>
-              </li>
-              <li className="nav-item">
-                <a href="/pravidla" className="nav-link">PRAVIDLA</a>
-              </li>
-              <li className="nav-item">
-                <a href="https://platby.hostify.cz/82906" className="nav-link" target="_blank"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
+                <a href="/vip" className="nav-link"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
               </li>
             </ul>
           </div>
