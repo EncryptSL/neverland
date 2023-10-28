@@ -50,6 +50,15 @@ body::before {
 	text-shadow: 2px 1px 8px rgba(0, 0, 0, 0.6), 0 -1px 8px rgba(0, 0, 0, 0.4);
 }
 
+.stats-hero {
+  text-transform: uppercase;
+  background: url(/assets/stats_wallpaper.webp) repeat top center;
+}
+
+.stats-content {
+  background: #f0f3f8;
+}
+
 .cover-me {
   margin-top: 1rem!important;
   margin-bottom: -3rem!important;

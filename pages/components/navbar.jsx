@@ -18,6 +18,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <a href="/#vote" className="nav-link">HLASOVÁNÍ</a>
               </li>
+              <li className="nav-item">
+                <a href="/stats" className="nav-link">STATISTIKY</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   OSTATNÍ
