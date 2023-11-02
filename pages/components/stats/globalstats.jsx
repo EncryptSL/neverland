@@ -30,7 +30,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Kreditů</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-netherite-ingot"></i> Celkem Kreditů</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_credits)}</p>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Peněz</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-gold-block"></i> Celkem Peněz</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_money)}</p>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Hlasů</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-emerald-block"></i> Celkem Hlasů</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_votes)}</p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Zničených bloků</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-stone-pickaxe"></i> Celkem Zničených bloků</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_blocks)}</p>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Zabitých mobů</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-wooden-sword"></i> Celkem Zabitých mobů</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_kills)}</p>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Úmrtí</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-wither-rose"></i> Celkem Úmrtí</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_deaths)}</p>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3">Celkem Nahraný čas</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-compass"></i> Celkem Nahraný čas</h5>
                               <p className="card-text fs-1 fw-bold">{stats.total_playedtime}</p>
                             </div>
                         </div>

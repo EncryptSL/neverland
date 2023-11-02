@@ -27,7 +27,7 @@ const submitSearch = async(event) => {
                     </div>
                   </div>
 
-                  <div class="col-12">
+                  <div className="col-12">
                     <button type="submit" className="btn btn-primary">VYHLEDAT</button>
                   </div>
                 </form>

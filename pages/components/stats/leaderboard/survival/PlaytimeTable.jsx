@@ -9,6 +9,8 @@ const PlaytimeTable = ({data}) => {
                     <th scope="col">#ID</th>
                     <th scope="col">HRÁČ</th>
                     <th scope="col">AKTIVITA</th>
+                    <th scope="col">PRVNÍ PŘIPOJENÍ</th>
+                    <th scope="col">POSLEDNÍ PŘIPOJENÍ</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +21,8 @@ const PlaytimeTable = ({data}) => {
                                 <th>{e?.id}</th>
                                 <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
                                 <td>{e?.playedtime}</td>
+                                <td>{e?.first_join}</td>
+                                <td>{e?.last_join}</td>
                             </tr>
                         )
                     })

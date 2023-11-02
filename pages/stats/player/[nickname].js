@@ -3,7 +3,6 @@ import axios from "axios"
 import Image from "next/image"
 
 const PlayerStats = ({ player }) => {
-
     return (
         <>
             <section className="p-5 stats-hero">
@@ -32,51 +31,51 @@ const PlayerStats = ({ player }) => {
                             <div className="card mb-3 text-center">
                                 <div className="card-header text-bg-primary fw-bold">AKTUÁLNÍ SKIN</div>
                                 <div className="card-body">
-                                    <Image src={"https://visage.surgeplay.com/full/200/" + player.uuid} className="rounded" width={"124"} height={"200"} />
+                                    <Image src={"https://visage.surgeplay.com/full/200/" + player.uuid} alt={player.uuid} className="rounded" width={"124"} height={"200"} />
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-8">
                             <div className="card mb-3 text-center">
-                                <div className="card-header text-bg-success fw-bold">ZÁKLADNÍ STATISTIKY</div>
+                                <div className="card-header text-bg-success fw-bold"><i className="icon-minecraft icon-minecraft-compass"></i> ZÁKLADNÍ STATISTIKY</div>
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.mined_blocks}</span>
+                                                <span>{player.first_join}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold">Zničené bloky</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-right-to-bracket"></i> První Připojení</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.kills}</span>
+                                                <span>{player.last_join}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold">Zabití</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-clock-rotate-left"></i> Poslední Připojení</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.deaths}</span>
+                                                <span>{player.played_time}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold">Úmrtí</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-clock"></i> Nahraný Čas</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="card mb-3 text-center">
-                                <div className="card-header text-bg-success fw-bold">EKONOMICKÉ STATISTIKY</div>
+                                <div className="card-header text-bg-success fw-bold"><i className="icon-minecraft icon-minecraft-gold-block"></i> EKONOMICKÉ STATISTIKY</div>
                                 <div className="card-body">
                                     <div className="row justify-content-center">
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
                                                 <span>{player.credit}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold">Kreditů</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i class="fa-solid fa-money-bill"></i> Kreditů</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
                                                 <span>{player.money}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold">Peníze</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-sack-dollar"></i> Peníze</p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,9 +83,9 @@ const PlayerStats = ({ player }) => {
                         </div>
                         <div className="col-md-6 col-xl-6">
                             <div className="card mb-3 text-center">
-                                <div className="card-header text-bg-success fw-bold">HLASOVÁNÍ</div>
+                                <div className="card-header text-bg-success fw-bold"><i className="icon-minecraft icon-minecraft-emerald-block"></i> HLASOVÁNÍ</div>
                                     <div className="card-body">
-                                        <table class="table table-striped table-hover">
+                                        <table className="table table-striped table-hover">
                                             <tbody>
                                               <tr>
                                                 <td className="text-start">Celkem hlasů</td>
@@ -101,7 +100,30 @@ const PlayerStats = ({ player }) => {
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-xl-6">
+                            <div className="card mb-3 text-center">
+                                <div className="card-header text-bg-success fw-bold"><i className="icon-minecraft icon-minecraft-diamond-block"></i> SURVIVAL STATISTIKY</div>
+                                    <div className="card-body">
+                                        <table className="table table-striped table-hover">
+                                            <tbody>
+                                              <tr>
+                                                <td className="text-start"><i className="icon-minecraft icon-minecraft-netherite-pickaxe"></i> Zničené bloky</td>
+                                                <td className="text-center">{player.mined_blocks}</td>
+                                              </tr>
+                                              <tr>
+                                                <td className="text-start"><i className="icon-minecraft icon-minecraft-skeleton-skull"></i> Zabití mobové</td>
+                                                <td className="text-center">{player.kills}</td>
+                                              </tr>
+                                              <tr>
+                                                <td className="text-start"><i className="icon-minecraft icon-minecraft-wither-rose"></i> Smrtí</td>
+                                                <td className="text-center">{player.deaths}</td>
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,7 +147,7 @@ function badges(group) {
 }
 
 export async function getStaticPaths() {
-    const response = await axios.get('//encryptsl.cekuj.net/api/minecraft/stats/players')
+    const response = await axios.get('https://encryptsl.cekuj.net/api/minecraft/stats/players')
     const data = await response.data
     return {
         paths : data.map(p => (
@@ -138,7 +160,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const response = await axios.get(`//encryptsl.cekuj.net/api/minecraft/player/${params.nickname}`)
+    const response = await axios.get(`https://encryptsl.cekuj.net/api/minecraft/player/${params.nickname}`)
     const player = await response.data[0]
     return {
         props: {

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/minecraft-icons.css'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
