@@ -21,14 +21,14 @@ const Navbar = () => {
               <li className="nav-item">
                 <a href="/stats" className="nav-link">STATISTIKY</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   OSTATNÍ
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/#adminteam">ADMIN TÝM</a></li>
-                  <li><a class="dropdown-item" href="/banlist">BANLIST</a></li>
-                  <li><a class="dropdown-item" href="/pravidla">PRAVIDLA</a></li>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="/#adminteam">ADMIN TÝM</a></li>
+                  <li><a className="dropdown-item" href="/banlist">BANLIST</a></li>
+                  <li><a className="dropdown-item" href="/pravidla">PRAVIDLA</a></li>
                 </ul>
               </li>
               <li className="nav-item">

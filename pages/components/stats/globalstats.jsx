@@ -39,7 +39,7 @@ const Globalstats = () => {
                         <div className="card">
                             <div className="card-body">
                               <h5 className="card-title fs-3">Celkem Peněz</h5>
-                              <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_vault)}</p>
+                              <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_money)}</p>
                             </div>
                         </div>
                     </div>
@@ -72,6 +72,14 @@ const Globalstats = () => {
                             <div className="card-body">
                               <h5 className="card-title fs-3">Celkem Úmrtí</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_deaths)}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="card">
+                            <div className="card-body">
+                              <h5 className="card-title fs-3">Celkem Nahraný čas</h5>
+                              <p className="card-text fs-1 fw-bold">{stats.total_playedtime}</p>
                             </div>
                         </div>
                     </div>

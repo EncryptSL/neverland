@@ -22,7 +22,7 @@ const Vote = () => {
                         <form className="flex flex-col" method="post" onSubmit={submitVote}>
                             <label htmlFor="service">Kde chceš Hlasovat</label>
                               <select className="form-select" name="service" aria-label="service" required>
-                                  <option disabled={true} selected value="">Vyber prosím službu</option>
+                                  <option disabled={true} defaultValue={""}>Vyber prosím službu</option>
                                   <option value="czech-craft">Czech-Craft</option>
                                   <option value="craftlist">Craftlist</option>
                               </select>

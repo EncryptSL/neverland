@@ -1,6 +1,7 @@
 import React from "react";
 import Globalstats from "../components/stats/globalstats";
 import Search from "../components/stats/search";
+import Subnav from "../components/stats/subnav";
 
 const stats = () => {
 
@@ -13,6 +14,7 @@ const stats = () => {
                 </p>
                 <Search />
             </section>
+            <Subnav />
             <Globalstats />
         </>
     );

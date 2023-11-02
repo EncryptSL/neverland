@@ -17,7 +17,7 @@ const PlayerStats = ({ player }) => {
                                 <div className="mb-0">
                                     <div className="hstack gap-1">
                                         <span className={"badge " + badges(player.primary_group)}>{player.primary_group.toUpperCase()}</span>
-                                        <span className="badge bg-primary">LEVEL {player.level}</span>
+                                        <span className="badge bg-secondary">LEVEL {player.level}</span>
                                     </div>                                    
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const PlayerStats = ({ player }) => {
                                     <div className="row">
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.blocks}</span>
+                                                <span>{player.mined_blocks}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold">Zničené bloky</p>
                                         </div>
@@ -90,12 +90,12 @@ const PlayerStats = ({ player }) => {
                                             <tbody>
                                               <tr>
                                                 <td className="text-start">Celkem hlasů</td>
-                                                <td className="text-center">{player.vote}</td>
+                                                <td className="text-center">{player.votes}</td>
                                               </tr>
                                               <tr>
                                                 <td className="text-start">Poslední hlasování</td>
                                                 <td className="text-center">
-                                                    {new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.timestamp))}
+                                                    {new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.last_vote))}
                                                 </td>
                                               </tr>
                                             </tbody>

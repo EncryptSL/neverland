@@ -24,8 +24,8 @@ body::before {
 }
 
 .default {
-  padding: 40px 0!important;
-  background: url(/assets/thumbnail.webp) no-repeat top center;
+  padding: 100px 0!important;
+  background: url(/assets/thumbnail.webp) no-repeat center;
 }
 
 .team-managers {
