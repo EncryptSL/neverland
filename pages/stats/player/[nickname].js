@@ -146,6 +146,7 @@ function badges(group) {
 
 }
 
+/*
 export async function getStaticPaths() {
     const response = await axios.get('https://encryptsl.cekuj.net/api/minecraft/stats/players')
     const data = await response.data
@@ -157,16 +158,15 @@ export async function getStaticPaths() {
         )),
         fallback: false
     }
-}
+}*/
 
-export async function getStaticProps({params}) {
+export async function getServerSideProps({params}) {
     const response = await axios.get(`https://encryptsl.cekuj.net/api/minecraft/player/${params.nickname}`)
     const player = await response.data[0]
     return {
         props: {
             player
-        },
-        revalidate: 1,
+        }
     }
 }
 

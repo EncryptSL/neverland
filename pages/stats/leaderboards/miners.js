@@ -22,7 +22,7 @@ const Miners = ({data}) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/blocks`)
     const data = res.data
    

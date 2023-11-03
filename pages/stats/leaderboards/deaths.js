@@ -22,7 +22,7 @@ const Deaths = ({data}) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/deaths`)
     const data = res.data
    

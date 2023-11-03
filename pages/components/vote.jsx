@@ -22,14 +22,14 @@ const Vote = () => {
                         <form className="flex flex-col" method="post" onSubmit={submitVote}>
                             <label htmlFor="service">Kde chceš Hlasovat</label>
                               <select className="form-select" name="service" aria-label="service" required>
-                                  <option disabled={true} defaultValue={""}>Vyber prosím službu</option>
+                                  <option disabled={false} value={""}>Vyber prosím službu</option>
                                   <option value="czech-craft">Czech-Craft</option>
                                   <option value="craftlist">Craftlist</option>
                               </select>
                               <div className="mb-3">
                                 <label htmlFor="nick" className="form-label">Herní Nick</label>
                                 <input type="text" className="form-control" id="nick" name="nick" aria-describedby="nickName" />
-                                <div id="nickName" className="form-text">Pokud jméno nevyplníte budete přesměrování bez vyplněného jméno</div>
+                                <div id="nickName" className="form-text">Pokud jméno nevyplníte budete přesměrování bez vyplněného jména</div>
                               </div>
                             <button type="submit" className="btn btn-secondary btn-sm">HLASOVAT</button>
                         </form>

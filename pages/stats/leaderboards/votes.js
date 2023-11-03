@@ -22,7 +22,7 @@ const Votes = ({data}) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/votes`)
     const data = res.data
    

@@ -22,7 +22,7 @@ const Credits = ({data}) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/credits`)
     const data = res.data
    

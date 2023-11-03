@@ -75,7 +75,7 @@ function bansBadges($type) {
     else 
         return $type
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/banlist/`)
     const data = res.data
    
