@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
@@ -6,7 +5,7 @@ import { marked } from 'marked';
 const postsDirectory = path.join(process.cwd(), 'posts/shop/pages/ranks');
 
 export function getRankBundles() {
-  // Get file names under /posts
+  const fs = require('fs');
   const fileNames = fs.readdirSync(postsDirectory);
   const allRanks = fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);

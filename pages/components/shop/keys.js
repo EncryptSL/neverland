@@ -1,11 +1,10 @@
-import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'posts/shop/pages/keys');
 
 export function getKeyBundles() {
-  // Get file names under /posts
+  const fs = require('fs');
   const fileNames = fs.readdirSync(postsDirectory);
   const allCategories = fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
