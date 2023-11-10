@@ -2,7 +2,7 @@ import React from "react";
 import Subnav from "../components/shop/subnav";
 import {getCategories} from "../../libs/shop/categories"
 
-export default function shop({categories}) {
+const shop = ({categories}) => {
     return (
         <section className="p-5">
             <div className="container">
@@ -41,3 +41,5 @@ export async function getStaticProps() {
       },
     };
 }
+
+export default shop;
