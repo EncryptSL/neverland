@@ -32,7 +32,7 @@ const shop = ({categories}) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const categories = getCategories();
 
     return {
