@@ -1,6 +1,6 @@
 import React from "react";
 import Subnav from "../../components/shop/subnav";
-import { getRankBundles } from "../../components/shop/ranks";
+import {getRankBundles} from "../../../libs/shop/ranks"
 
 export default function ranks({ranks}) {
     return (
@@ -35,8 +35,6 @@ export default function ranks({ranks}) {
 
 export async function getStaticProps() {
     const ranks = getRankBundles();
-
-    console.log(ranks)
 
     return {
       props: {

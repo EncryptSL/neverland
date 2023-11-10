@@ -1,6 +1,6 @@
 import React from "react";
-import { getCategories } from "../components/shop/categories";
 import Subnav from "../components/shop/subnav";
+import {getCategories} from "../../libs/shop/categories"
 
 export default function shop({categories}) {
     return (

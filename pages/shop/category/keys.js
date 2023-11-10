@@ -1,6 +1,6 @@
 import React from "react"
-import { getKeyBundles } from "../../components/shop/keys";
 import Subnav from "../../components/shop/subnav";
+import {getKeyBundles} from "../../../libs/shop/keys"
 
 export default function keys({bundles}) {
     return (
@@ -39,7 +39,7 @@ export default function keys({bundles}) {
 }
 
 export async function getStaticProps() {
-    const bundles = getKeyBundles();
+    const bundles = getKeyBundles()
 
     return {
       props: {
