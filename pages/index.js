@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Header from './/components/header';
 import About from './components/about';
-import Team from './components/team';
 import Discord from './components/discord/discord';
 import {React} from 'react';
 import Vote from './components/vote';
+import Players from './components/status/players';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <About />
       <Discord />
       <Vote />
-      <Team />
+      <Players />
     </>
   )
 }

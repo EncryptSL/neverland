@@ -42,13 +42,13 @@ const PlayerStats = ({ player }) => {
                                     <div className="row">
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.first_join}</span>
+                                                <span>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.first_join))}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-right-to-bracket"></i> První Připojení</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.last_join}</span>
+                                                <span>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.last_join))}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-clock-rotate-left"></i> Poslední Připojení</p>
                                         </div>
@@ -69,7 +69,7 @@ const PlayerStats = ({ player }) => {
                                             <div className="font-size-h3 font-w500">
                                                 <span>{player.credit}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold"><i class="fa-solid fa-money-bill"></i> Kreditů</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-money-bill"></i> Kreditů</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
@@ -145,20 +145,6 @@ function badges(group) {
     }
 
 }
-
-/*
-export async function getStaticPaths() {
-    const response = await axios.get('https://encryptsl.cekuj.net/api/minecraft/stats/players')
-    const data = await response.data
-    return {
-        paths : data.map(p => (
-            {
-                params: { nickname : p.username }
-            }
-        )),
-        fallback: false
-    }
-}*/
 
 export async function getServerSideProps({params}) {
     const response = await axios.get(`https://encryptsl.cekuj.net/api/minecraft/player/${params.nickname}`)

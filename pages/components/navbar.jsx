@@ -26,13 +26,14 @@ const Navbar = () => {
                   OSTATNÍ
                 </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/#adminteam">ADMIN TÝM</a></li>
+                  <li><a className="dropdown-item" href="/team">ADMIN TÝM</a></li>
+                  <li><a className="dropdown-item" href="/shop/category/ranks">VIP</a></li>
                   <li><a className="dropdown-item" href="/banlist">BANLIST</a></li>
                   <li><a className="dropdown-item" href="/pravidla">PRAVIDLA</a></li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a href="/vip" className="nav-link"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
+                <a href="/shop" className="nav-link"><i className="fa-solid fa-cart-shopping"></i> OBCHOD</a>
               </li>
             </ul>
           </div>

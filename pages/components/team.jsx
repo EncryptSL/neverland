@@ -18,13 +18,4 @@ const Team = () => {
       </section>
     )
 }
-
-function socialButtons(link, btnName, clazzName) {
-    if (link === undefined)
-        return ``
-    else if (link === "#")
-        return ``
-    else
-        return (<a className={"btn btn-sm m-1 " + clazzName} target="_blank" href={link} title={btnName} rel="noreferrer" role="button"><i className={"bi bi-" + btnName.toLowerCase()}></i></a>)
-}
 export default Team;

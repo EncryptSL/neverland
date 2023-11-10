@@ -7,6 +7,7 @@
             "uuid": "8dd6b6cb-8de7-4091-884e-062c0d5c074f",
             "description": "OWNER",
             "badge_color": "text-bg-danger",
+            "background": "owner",
             "instagram": "#"
         },
         {
@@ -15,6 +16,7 @@
             "uuid": "0ba5241b-e841-4908-8da4-e8bec9a8f902",
             "description": "DEVELOPER",
             "badge_color": "text-bg-warning",
+            "background": "developer",
             "instagram": "#"
         },
         {
@@ -23,6 +25,7 @@
             "uuid": "5fda563e-3f43-4001-9707-415dfbf28287",
             "description": "ADMIN",
             "badge_color": "text-bg-primary",
+            "background": "admin",
             "instagram": "#"
         }
     ],
@@ -33,6 +36,7 @@
             "uuid": "MHF_Question",
             "description": "ADMIN",
             "badge_color": "text-bg-primary",
+            "background": "admin",
             "instagram": "#"
         },
         {
@@ -41,6 +45,7 @@
             "uuid": "MHF_Question",
             "description": "ADMIN",
             "badge_color": "text-bg-primary",
+            "background": "admin",
             "instagram": "#"
         }
     ],
@@ -51,6 +56,7 @@
             "uuid": "MHF_Question",
             "description": "Moderátor",
             "badge_color": "text-bg-success",
+            "background": "moderator",
             "instagram": "#"
         },
         {
@@ -59,6 +65,7 @@
             "uuid": "MHF_Question",
             "description": "Moderátor",
             "badge_color": "text-bg-success",
+            "background": "moderator",
             "instagram": "#"
         }
     ]

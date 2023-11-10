@@ -1,5 +1,4 @@
 import React from "react";
-import team from "/json/admins.json"
 import Image from "next/image";
 import useSWR from "swr";
 
@@ -16,22 +15,24 @@ const Admins = () => {
         {
          team && team["admins"].map(record => {
             return (
-            <div className="col-lg-3 text-white" key={record.id}>
-            <div className="card team-admins">
-                <div className="card-body">
-                    <h5 className="card-title text-center">
-                        <Image src={"https://visage.surgeplay.com/bust/"+record.uuid} className="rounded-circle" alt={'avt'+record.username} title={record.username} height="100" width="100" /> 
-                    </h5>
-                    <div className="text-center">
-                        <p className="fw-bold">{ record.username }</p>
-                        <span className={"badge text-white " + record.badge_color}>{record.description}</span>
-                    </div>
-                    <div className="text-center">
-                        {socialButtons(record.instagram, "Instagram", "btn-secondary")}
+                <div className="col-md-6 col-lg-4 mb-30" key={record.id}>
+                    <div className="team-item">
+                        <div className="mb-30 position-relative d-flex align-items-center">
+                                <span class="socials d-inline-block">
+                                    <a href="#" className="fa-brands fa-instagram"></a>
+                                    <a href="#" className="fa-brands fa-youtube"></a>
+                                    <a href="#" className="fa-brands fa-twitch"></a>
+                                </span>
+                            <span className="img-holder d-inline-block">
+                                <img className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} alt={record.uuid} />
+                            </span>
+                        </div>
+                        <div className="team-content">
+                            <h5 className="mb-2">{record.username}</h5>
+                            <p className={`text-uppercase mb-0 badge ${record.badge_color}`}>{record.description}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-          </div>
          )})
         }
         </div>
