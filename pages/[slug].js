@@ -25,7 +25,7 @@ const SlugPage = ({ htmlString, data }) => {
 
 export const getStaticPaths = async () => {
     const fs = require('fs');
-    const files = fs.readdirSync("posts");
+    const files = fs.readdirSync("posts/pages");
     const paths = files.map(filename => ({
       params: {
         slug: filename.replace(".md", "")
@@ -40,7 +40,7 @@ export const getStaticPaths = async () => {
   export const getStaticProps = async ({ params: { slug } }) => {
     const fs = require('fs');
     const path = require("path")
-    const markdownWithMetadata = fs.readFileSync(path.join("posts", slug + ".md"));
+    const markdownWithMetadata = fs.readFileSync(path.join("posts/pages", slug + ".md"));
   
     const parsedMarkdown = matter(markdownWithMetadata);
   
