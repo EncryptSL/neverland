@@ -4,7 +4,7 @@ import {getKeyBundles} from "../../../libs/shop/keys"
 
 export default function keys({bundles}) {
     return (
-        <section className="p-5">
+        <section className="p-5 shop">
             <div className="container">
                 <Subnav />
                 <h2 className="text-center">Galaktické Klíče</h2>
@@ -15,7 +15,7 @@ export default function keys({bundles}) {
                             <div className="card border-primary">
                               <img src="/assets/galactic_keys.webp" className="card-img-top" alt={bundle.title} />
                                 <div className="card-header py-3 text-center text-bg-primary border-primary"><h4 className="my-0 fw-normal">{bundle.title}</h4></div>
-                              <div className="card-body">
+                              <div className="card-body text-bg-light">
                                 <p className="card-text">
                                     Cena: <span className="fw-bold">{bundle?.price}</span>
                                 </p>
@@ -27,10 +27,6 @@ export default function keys({bundles}) {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="text-start">
-                  <p className="fw-bold">This page not affiliated with Mojang or Microsoft.*</p>
                 </div>
             </div>
         </section>        

@@ -4,7 +4,7 @@ import {getRankBundles} from "../../../libs/shop/ranks"
 
 export default function ranks({ranks}) {
     return (
-        <section className="p-5">
+        <section className="p-5 shop">
             <div className="container">
                 <Subnav />
                 <h2 className="text-center">Ranky a Výhody</h2>
@@ -13,7 +13,7 @@ export default function ranks({ranks}) {
                         <div className="col-lg-3 mb-3">
                             <div className="card border-primary">
                                 <div className="card-header py-3 text-center text-bg-primary"><h4 className="my-0 fw-normal">{rank.title}</h4></div>
-                                <div className="card-body">
+                                <div className="card-body text-bg-light">
                                   <h5 className="card-title text-center">{rank.price}</h5>
                                   <div className="card-text" dangerouslySetInnerHTML={{ __html: rank.content }}></div>
                                   <div className="d-grid gap-2">
@@ -25,9 +25,6 @@ export default function ranks({ranks}) {
                         </div>
                         ))}
                     </div>
-                <div className="text-start">
-                  <p className="fw-bold">This page not affiliated with Mojang or Microsoft.*</p>
-                </div>
             </div>
         </section>
     )

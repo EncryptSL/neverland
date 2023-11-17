@@ -7,7 +7,7 @@ const subnav = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-dark navbar-dark mb-4">
+            <nav className="navbar navbar-expand-lg bg-dark navbar-dark mb-4 shop-nav">
               <div className="container-fluid">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>

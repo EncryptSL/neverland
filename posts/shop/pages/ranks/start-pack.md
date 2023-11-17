@@ -23,4 +23,3 @@ order: 2
 - Velikost residence 250x250
 - <span class="fw-bold">+ 1000 $</span>
 - <span class="fw-bold">+ 3 Galaktické Box Klíče</span>
-- <span class="fw-bold">Cena 60,- CZK nebo 2 Euro</span>
