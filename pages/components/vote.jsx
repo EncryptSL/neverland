@@ -48,10 +48,10 @@ const Vote = () => {
                         </ul>
                         <ul className="nav">
                             <li className="nav-item">
-                              <a className="nav-link" href="https://czech-craft.eu/server/neveland/"><Image src="https://czech-craft.eu/api/server/neveland/badges/position.svg" alt="czechcraft" width={"87"} height={"27"} /></a>
+                              <a className="nav-link" href="https://czech-craft.eu/server/neveland/"><Image src="https://czech-craft.eu/api/server/neveland/badges/position.svg" decoding="async" alt="czechcraft" width={"87"} height={"27"} /></a>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href="https://craftlist.org/neverland"><Image src="https://craftlist.org/server-icons/ranks/small/2033.png" alt="craftlist" width={"87"} height={"27"} /></a>
+                              <a className="nav-link" href="https://craftlist.org/neverland"><Image src="https://craftlist.org/server-icons/ranks/small/2033.png" decoding="async" alt="craftlist" width={"87"} height={"27"} /></a>
                             </li>
                         </ul>
                     </div>

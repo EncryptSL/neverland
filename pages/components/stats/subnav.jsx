@@ -26,8 +26,8 @@ const Subnav = () => {
               Ekonomické Statistiky
             </a>
             <ul className="dropdown-menu">
-              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/money' ? 'active' : ''}`} href="/stats/leaderboards/money">Největší boháči</a></li>
-              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/credits' ? 'active' : ''}`} href="/stats/leaderboards/credits">Nějvětší pracháči s kredity</a></li>
+              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/money' ? 'active' : ''}`} href="/stats/leaderboards/money">Nejbohatší hráči s dollary</a></li>
+              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/credits' ? 'active' : ''}`} href="/stats/leaderboards/credits">Nejbohatší hráči s kredity</a></li>
             </ul>
           </li>
           <li className="nav-item dropdown">

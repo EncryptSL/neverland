@@ -27,7 +27,6 @@ export default function Document() {
                         </a>
                     </div>
                 </footer>
-
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
                     integrity="sha256-JRXjfu4x9e89ZZsh3MhNxupzKwaHLaUQeLW1Jt40wME=" crossOrigin='anonymous'></script>
                 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

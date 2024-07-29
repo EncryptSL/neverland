@@ -18,9 +18,7 @@ body::before {
 }
 }
 .member-background {
-  background-image: url(/assets/night.webp);
-  background-size: cover;
-  background-attachment: fixed;
+  background: currentColor;
 }
 
 .default {
@@ -127,6 +125,22 @@ button:hover {
 @media(max-width: 768px) {
   .discord-img {
       display:none;
+  }
+}
+
+@media (max-width: 990px) {  /* Adjust breakpoint as needed */
+  .center-status {
+    text-align: center;
+  }
+  .col-status {
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 990px) {  /* Adjust breakpoint as needed */
+  .col-status {
+    flex: 0 0 auto;
+    width: 8.33333333%;
   }
 }
 

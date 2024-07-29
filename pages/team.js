@@ -17,7 +17,6 @@ export default function team() {
                     </div>
                     <div className="row justify-content-center">
                         <Management />
-                        <Admins />
                         <Moderators />
                     </div>
                 </div>

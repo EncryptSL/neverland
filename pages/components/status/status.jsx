@@ -14,6 +14,7 @@ const Status = () => {
     axios.get('//api.mcstatus.io/v2/status/java/salmon.hostify.cz:51090').then((res) => res.data)
       .then((status) => {
         setData(status)
+        console.log(status.port)
         setLoading(false)
       })
   }, [])
@@ -23,35 +24,41 @@ const Status = () => {
       <div className="col-md cover-me container">Načítání</div>
     </>
   )
-  if (!status) return <p>No server data</p>
 
-    if (status?.online === false) {
+  if (!status) return (
+    <section id="status" className="p-5">
+      <h3><i className="fa-solid fa-circle-exclamation"></i> Nepodařilo se načíst data..</h3>
+    </section>
+  )
+
+  if (status?.online === false) {
       return (
-        <div className="col-md cover-me container">
-          <div className="status-offline text-center">
-            <div>
-                <h3><i className="fa-solid fa-circle-exclamation"></i> Server je Offline</h3>
+        <section id="status" className="p-5">
+              <h3><i className="fa-solid fa-circle-exclamation"></i> Server je Offline</h3>
+        </section>
+      )
+  } else {
+      return (
+        <section id="status" className="p-1 center-status bg-light">
+          <div className="container">
+            <div className="row d-flex align-items-center justify-content-center">
+             <div className="col-status flex-shrink-0 ms-1">
+              <img src={status?.icon} loading="lazy" height={85} width={85} alt="icon" decoding="async"/>
+             </div>
+             <div className="col-sm flex-grow-1 ms-3">
+                <p>{status?.host}:{status?.port}</p>
+                <p><span className="fw-bold">PRÁVĚ HRAJE {status?.players?.online} HRÁČŮ</span></p>
+             </div>
+             <div className="col col-lg-2" style={{fontSize: "40px"}}>
+                <a href="#" className="px-2 link-danger"><i className="fa-brands fa-square-instagram"></i></a>
+                <a href="#" className="px-2 link-danger"><i className="fa-brands fa-square-youtube"></i></a>
+                <a href="#" className="px-2 link-danger"><i className="fa-brands fa-square-facebook"></i></a>
+             </div>
             </div>
           </div>
-        </div>
+        </section>
       )
-    }
-
-    return (
-      <div className="col-md cover-me container">
-        <div className="status">
-          <div>
-              <div className="d-flex">
-                <h4>IP: <span>{status?.host}:{status?.port}</span></h4>
-              </div>
-              <p><i className="fa-solid fa-user-group"></i> Právě hraje <span className="fw-bold">{status?.players?.online}</span></p>
-          </div>
-          <Link href="/[slug]" className="ms-auto" as="jak-se-pripojit">
-            <button>Jak se Připojit</button>
-          </Link>
-        </div>
-      </div>
-    )
+  }
 }
 
 export default Status;

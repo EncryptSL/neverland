@@ -24,7 +24,7 @@ const Players = () => {
     if (!status) return <p>No server data</p>
 
     return (
-        <section className="text-center p-5 member-background">
+        <section className="text-center p-5 bg-secondary">
             <div className="container">
                 {status.map((player) => (
                     <Image key={player.uuid} className="rounded-circle" src={`https://crafatar.com/avatars/${player.uuid}`} alt={`img-${player.name_clean}`} title={player.name_clean} height={64} width={64}/>

@@ -1,5 +1,4 @@
 import {React, useState, useEffect } from "react";
-import Status from "./status/status";
 import Image from "next/image";
 
 const Header = () => {
@@ -7,7 +6,7 @@ const Header = () => {
   const [image, setImage] = useState("")
 
   const getImage = () => {
-    setImage(<Image className="avatar" priority src="/assets/header_figure.webp" width={350} height={350} alt="firuge" title="header_figure"/>)
+    setImage(<Image className="avatar" priority src="/assets/header_figure.webp" decoding="async" width={350} height={350} alt="firuge" title="header_figure"/>)
   }
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const Header = () => {
             </div>
             <div>{image}</div>
           </div>
-          <Status />
         </div>
       </section>
     )

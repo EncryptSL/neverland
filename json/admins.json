@@ -5,8 +5,8 @@
             "id": "5350",
             "username": "Wzarek755",
             "uuid": "8dd6b6cb-8de7-4091-884e-062c0d5c074f",
-            "description": "OWNER",
-            "badge_color": "text-bg-danger",
+            "badge_text": "OWNER",
+            "badge_color": "badge-owner",
             "background": "owner",
             "instagram": "#"
         },
@@ -14,8 +14,8 @@
             "id": "8915",
             "username": "EncryptSL",
             "uuid": "0ba5241b-e841-4908-8da4-e8bec9a8f902",
-            "description": "DEVELOPER",
-            "badge_color": "text-bg-warning",
+            "badge_text": "DEVELOPER",
+            "badge_color": "badge-developer",
             "background": "developer",
             "instagram": "#"
         },
@@ -23,9 +23,24 @@
             "id": "1676",
             "username": "a_patress_o",
             "uuid": "5fda563e-3f43-4001-9707-415dfbf28287",
-            "description": "ADMIN",
-            "badge_color": "text-bg-primary",
-            "background": "admin",
+            "badge_text": "MANAŽER",
+            "badge_color": "badge-manager",
+            "instagram": "#"
+        },
+        {
+            "id": "8244",
+            "username": "korspeed_cz",
+            "uuid": "2c655f8f-e808-413a-a460-523fd547dc5d",
+            "badge_text": "SPRÁVCE SERVERU",
+            "badge_color": "badge-server-master",
+            "instagram": "#"
+        },
+        {
+            "id": "8244",
+            "username": "FireWaterGame",
+            "uuid": "1467c4e8-7908-4690-bdbf-b3bd22e88ecb",
+            "badge_text": "ADMIN",
+            "badge_color": "badge-admin text-white",
             "instagram": "#"
         }
     ],
@@ -34,18 +49,16 @@
             "id": "4088",
             "username": "Pozice není obsazena",
             "uuid": "MHF_Question",
-            "description": "ADMIN",
+            "badge_text": "ADMIN",
             "badge_color": "text-bg-primary",
-            "background": "admin",
             "instagram": "#"
         },
         {
             "id": "8442",
             "username": "Pozice není obsazena",
             "uuid": "MHF_Question",
-            "description": "ADMIN",
+            "badge_text": "ADMIN",
             "badge_color": "text-bg-primary",
-            "background": "admin",
             "instagram": "#"
         }
     ],
@@ -54,18 +67,16 @@
             "id": "2837",
             "username": "Pozice není obsazena",
             "uuid": "MHF_Question",
-            "description": "Moderátor",
+            "badge_text": "Moderátor",
             "badge_color": "text-bg-success",
-            "background": "moderator",
             "instagram": "#"
         },
         {
             "id": "4336",
             "username": "Pozice není obsazena",
             "uuid": "MHF_Question",
-            "description": "Moderátor",
+            "badge_text": "Moderátor",
             "badge_color": "text-bg-success",
-            "background": "moderator",
             "instagram": "#"
         }
     ]

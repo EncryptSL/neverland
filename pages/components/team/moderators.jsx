@@ -9,25 +9,16 @@ const Moderators = () => {
     return (
         <>
             <h2 className="mb-0 text-center text-white">Moderátoři</h2>
-            <div className="row mb-4 justify-content-center">
+            <div className="row mb-4 justify-content-center text-center">
             {
              team && team["moderators"].map(record => {
                 return (
-                    <div class="col-md-6 col-lg-4 mb-30" key={record.id}>
-                        <div class="team-item">
-                            <div class="mb-30 position-relative d-flex align-items-center">
-                                    <span class="socials d-inline-block">
-                                        <a href="#" class="fa-brands fa-instagram"></a>
-                                        <a href="#" class="fa-brands fa-youtube"></a>
-                                        <a href="#" class="fa-brands fa-twitch"></a>
-                                    </span>
-                                <span class="img-holder d-inline-block">
-                                    <img className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} alt={record.uuid} />
-                                </span>
-                            </div>
-                            <div class="team-content">
-                                <h5 class="mb-2">{record.username}</h5>
-                                <p class={`text-uppercase mb-0 badge ${record.badge_color}`}>{record.description}</p>
+                    <div className="col-md-4 my-2">
+                        <div className="card text-bg-secondary mb-3" key={record.id}>
+                            <div className="card-body">
+                              <img className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} loading="lazy" alt={record.uuid} height={150} width={150} />
+                              <h5 className="card-title">{record.username}</h5>
+                              <p className={`text-uppercase mb-0 badge ${record.badge_color}`}>{record.badge_text}</p>
                             </div>
                         </div>
                     </div>

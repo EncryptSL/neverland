@@ -23,7 +23,7 @@ const Discord = () => {
                     </div>
                     <div className="col-md-4 d-flex">
                         <div className="discord-img">
-                            <Image src={"/assets/villager.webp"} priority alt="discord_villager" width="300" height="306" />
+                            <Image src={"/assets/villager.webp"} priority decoding="async" alt="discord_villager" width="300" height="306" />
                         </div>
                     </div>
                 </div>

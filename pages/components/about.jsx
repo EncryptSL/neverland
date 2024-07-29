@@ -10,7 +10,7 @@ const About = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="figure">
-                            <Image src={"/assets/clear_skin.png"} priority alt="img" height="377" width="450" /> 
+                            <Image src={"/assets/clear_skin.png"} priority alt="img" decoding="async" height="377" width="450" /> 
                         </div>
                     </div>
                     <div className="col-lg-7 d-flex">
