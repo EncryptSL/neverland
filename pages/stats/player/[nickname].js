@@ -67,13 +67,13 @@ const PlayerStats = ({ player }) => {
                                     <div className="row justify-content-center">
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.credit}</span>
+                                                <span>{player.credits}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-money-bill"></i> Kreditů</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500">
-                                                <span>{player.money}</span>
+                                                <span>{player.dollars}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-sack-dollar"></i> Peníze</p>
                                         </div>
