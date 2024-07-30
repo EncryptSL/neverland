@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Subnav from "../../components/stats/subnav";
 import PlaytimeTable from "../../components/stats/leaderboard/survival/PlaytimeTable";
+import Status from "../../components/status/status";
 
 
 const Playtime = ({data}) => {
@@ -17,6 +18,7 @@ const Playtime = ({data}) => {
                     <PlaytimeTable data={data} />
                 </div>
             </section>
+            <Status />
         </>
     )
 }

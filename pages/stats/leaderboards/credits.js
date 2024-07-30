@@ -2,6 +2,7 @@ import React from "react";
 import CreditsTable from "../../components/stats/leaderboard/economy/CreditsTable";
 import Subnav from "../../components/stats/subnav";
 import axios from "axios";
+import Status from "../../components/status/status";
 
 const Credits = ({data}) => {
     return (
@@ -18,6 +19,7 @@ const Credits = ({data}) => {
                     <CreditsTable data={data} />
                 </div>
             </section>
+            <Status />
         </>
     )
 }

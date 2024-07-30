@@ -8,7 +8,7 @@ const Management = () => {
     const { data:team } = useSWR('api/admins', fetcher)
     return (
         <>
-            <h2 className="mb-0 text-center text-white">Vedení</h2>
+            <h2 className="mb-0 text-center text-dark">Vedení</h2>
             <div className="row mb-4 justify-content-center text-center">
             {
              team && team["management"].map(record => {

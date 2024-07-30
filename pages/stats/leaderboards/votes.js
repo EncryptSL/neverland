@@ -2,6 +2,7 @@ import React from "react";
 import VotesTable from "../../components/stats/leaderboard/VotesTable";
 import Subnav from "../../components/stats/subnav";
 import axios from "axios";
+import Status from "../../components/status/status";
 
 const Votes = ({data}) => {
     return (
@@ -18,6 +19,7 @@ const Votes = ({data}) => {
                     <VotesTable data={data} />
                 </div>
             </section>
+            <Status />
         </>
     )
 }

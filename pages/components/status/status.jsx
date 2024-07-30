@@ -1,11 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react"
-import Link from 'next/link'
 import axios from "axios";
-import useSWR from "swr";
-
 
 const Status = () => {
+
   const [status, setData] = useState(null)
   const [isLoading, setLoading] = useState(false)
 
@@ -14,22 +12,28 @@ const Status = () => {
     axios.get('//api.mcstatus.io/v2/status/java/salmon.hostify.cz:51090').then((res) => res.data)
       .then((status) => {
         setData(status)
-        console.log(status.port)
         setLoading(false)
+        console.log(status)
       })
   }, [])
 
-  if (isLoading) return (
-    <>
-      <div className="col-md cover-me container">Načítání</div>
-    </>
-  )
+ if (isLoading) return (
+   <>
+     <section id="status" className="p-5">
+       <div className="container">
+         <h3><i className="fa-solid fa-circle-exclamation"></i> Načítání...</h3>
+       </div>
+     </section>
+   </>
+ )
 
-  if (!status) return (
-    <section id="status" className="p-5">
-      <h3><i className="fa-solid fa-circle-exclamation"></i> Nepodařilo se načíst data..</h3>
-    </section>
-  )
+ if (!status) return (
+   <section id="status" className="p-5">
+     <div className="container">
+       <h3><i className="fa-solid fa-circle-exclamation"></i> Nepodařilo se načíst data..</h3>
+     </div>
+   </section>
+ )
 
   if (status?.online === false) {
       return (

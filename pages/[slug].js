@@ -1,6 +1,7 @@
 import React from "react";
 import { marked } from "marked";
 import matter from "gray-matter";
+import Status from "./components/status/status";
 
 
 const SlugPage = ({ htmlString, data }) => {
@@ -18,8 +19,8 @@ const SlugPage = ({ htmlString, data }) => {
                 <div dangerouslySetInnerHTML={{ __html: htmlString }}></div>
             </div>
         </section>
+        <Status />
     </>
-
   );
 };
 

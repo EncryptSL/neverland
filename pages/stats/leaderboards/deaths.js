@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Subnav from "../../components/stats/subnav";
 import DeathsTable from "../../components/stats/leaderboard/survival/DeathsTable";
+import Status from "../../components/status/status";
 
 const Deaths = ({data}) => {
     return (
@@ -18,6 +19,7 @@ const Deaths = ({data}) => {
                     <DeathsTable data={data} />
                 </div>
             </section>
+            <Status />
         </>
     )
 }

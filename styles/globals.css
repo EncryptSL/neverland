@@ -57,6 +57,10 @@ body::before {
   background: #f0f3f8;
 }
 
+.background-content {
+  background: #f0f3f8;
+}
+
 .cover-me {
   margin-top: 1rem!important;
   margin-bottom: -3rem!important;

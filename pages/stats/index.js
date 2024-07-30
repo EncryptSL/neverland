@@ -2,6 +2,7 @@ import React from "react";
 import Globalstats from "../components/stats/globalstats";
 import Search from "../components/stats/search";
 import Subnav from "../components/stats/subnav";
+import Status from "../components/status/status";
 
 const stats = () => {
 
@@ -16,6 +17,7 @@ const stats = () => {
             </section>
             <Subnav />
             <Globalstats />
+            <Status />
         </>
     );
 

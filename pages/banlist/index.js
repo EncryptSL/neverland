@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react"
 import Image from "next/image";
 import Pagination from "../components/banlist/pagination";
+import Status from "../../components/status/status";
 
 const Banlist = ({data}) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -64,6 +65,7 @@ const Banlist = ({data}) => {
                     onPageChange={onPageChange}
                 />
             </section>
+            <Status />
         </>
     )
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Subnav from "../../components/stats/subnav";
 import axios from "axios";
 import MoneyTable from "../../components/stats/leaderboard/economy/MoneyTable";
+import Status from "../../components/status/status";
 
 const Money = ({data}) => {
     return (
@@ -18,6 +19,7 @@ const Money = ({data}) => {
                     <MoneyTable data={data} />
                 </div>
             </section>
+            <Status />
         </>
     )
 }

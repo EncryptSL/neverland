@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 import Image from "next/image"
+import Status from "../../components/status/status";
 
 const PlayerStats = ({ player }) => {
     return (
@@ -75,7 +76,7 @@ const PlayerStats = ({ player }) => {
                                             <div className="font-size-h3 font-w500">
                                                 <span>{player.dollars}</span>
                                             </div>
-                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-sack-dollar"></i> Peníze</p>
+                                            <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-sack-dollar"></i> Dollarů</p>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +110,7 @@ const PlayerStats = ({ player }) => {
                                         <table className="table table-striped table-hover">
                                             <tbody>
                                               <tr>
-                                                <td className="text-start"><i className="icon-minecraft icon-minecraft-netherite-pickaxe"></i> Zničené bloky</td>
+                                                <td className="text-start"><i className="icon-minecraft icon-minecraft-netherite-pickaxe"></i> Vytěžené bloky</td>
                                                 <td className="text-center">{player.mined_blocks}</td>
                                               </tr>
                                               <tr>
@@ -128,6 +129,7 @@ const PlayerStats = ({ player }) => {
                     </div>
                 </div>
             </section>
+            <Status />
         </>
     )
 

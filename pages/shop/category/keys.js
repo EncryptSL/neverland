@@ -1,9 +1,11 @@
 import React from "react"
 import Subnav from "../../components/shop/subnav";
 import {getKeyBundles} from "../../../libs/shop/keys"
+import Status from "../../components/status/status";
 
 export default function keys({bundles}) {
     return (
+      <>
         <section className="p-5 shop">
             <div className="container">
                 <Subnav />
@@ -29,7 +31,9 @@ export default function keys({bundles}) {
                     ))}
                 </div>
             </div>
-        </section>        
+        </section>
+        <Status />
+      </>
     )
     
 }

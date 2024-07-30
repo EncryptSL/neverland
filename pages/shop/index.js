@@ -1,9 +1,11 @@
 import React from "react";
 import Subnav from "../components/shop/subnav";
 import {getCategories} from "../../libs/shop/categories"
+import Status from "../../components/status/status";
 
 const shop = ({categories}) => {
     return (
+      <>
         <section className="p-5 shop">
             <div className="container">
                 <Subnav />
@@ -25,6 +27,8 @@ const shop = ({categories}) => {
                 </div>
             </div>
         </section>
+        <Status />
+      </>
     )
 }
 

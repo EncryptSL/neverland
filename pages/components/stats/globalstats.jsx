@@ -38,7 +38,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-gold-block"></i> Celkem Peněz</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-gold-block"></i> Celkem Dollarů</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_money)}</p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-stone-pickaxe"></i> Celkem Zničených bloků</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-stone-pickaxe"></i> Celkem Vytěžených bloků</h5>
                               <p className="card-text fs-1 fw-bold">{formatNumbers(stats.total_blocks)}</p>
                             </div>
                         </div>
@@ -78,8 +78,16 @@ const Globalstats = () => {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-compass"></i> Celkem Nahraný čas</h5>
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-compass"></i> Celkem Odehraný čas</h5>
                               <p className="card-text fs-1 fw-bold">{stats.total_playedtime}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="card">
+                            <div className="card-body">
+                              <h5 className="card-title fs-3"><i className="icon-minecraft icon-minecraft-skull"></i> Celkem se Připojilo</h5>
+                              <p className="card-text fs-1 fw-bold">{stats.total_joined}</p>
                             </div>
                         </div>
                     </div>

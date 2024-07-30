@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Subnav from "../../components/stats/subnav";
 import MinersTable from "../../components/stats/leaderboard/survival/MinersTable";
+import Status from "../../components/status/status";
 
 const Miners = ({data}) => {
     return (
@@ -18,6 +19,7 @@ const Miners = ({data}) => {
                     <MinersTable data={data} />
                 </div>
             </section>
+            <Status />
         </>
     )
 }
