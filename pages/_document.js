@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Navbar from './components/navbar'
+import Status from './components/status/status';
 
 export default function Document() {
     return (
@@ -18,6 +19,7 @@ export default function Document() {
                 <Navbar />
                 <Main />
                 <NextScript />
+                <Status />
                 <footer className="p-5 bg-dark text-white text-center position-relative">
                     <div className="container">
                         <p className="lead">Copyright &copy; {new Date().getFullYear()} NeverLand CZ/SK</p>
