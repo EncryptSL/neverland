@@ -25,7 +25,7 @@ description: "Pravidla Minecraft Serveru"
 
 ### Herní účet a herní nick
  13. Všechny itemy, položené bloky, herní postavy a jejich majetek na    
-    serveru jsou majetkem serveru **Neverland CZ/SK**  a nejsou právně  
+    serveru jsou majetkem serveru **ArcadiaMc CZ/SK**  a nejsou právně  
     vymahatelné
  14. Hráč může vlastnit pouze jeden herní účet.
  15. Zákaz obchodovat s účty a zneužívat herní účty (půjčování, výměna) - trestá se tvrvalým banem

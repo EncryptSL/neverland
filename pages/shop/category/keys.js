@@ -15,7 +15,6 @@ export default function keys({bundles}) {
                     {bundles.map(bundle =>  (
                         <div className="col-lg-3 mb-3">
                             <div className="card border-primary">
-                              <img src="/assets/galactic_keys.webp" className="card-img-top" alt={bundle.title} />
                                 <div className="card-header py-3 text-center text-bg-primary border-primary"><h4 className="my-0 fw-normal">{bundle.title}</h4></div>
                               <div className="card-body text-bg-light">
                                 <p className="card-text">

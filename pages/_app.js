@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="EncryptSL (ETERNITY_ROOT#PATRIK_KOLAŘÍK)" />
-        <meta name="keywords" content="encryptsl, minecraft, neverlandmc" />
-        <title>NeverLand CZ/SK</title>
+        <meta name="keywords" content="encryptsl, minecraft, arcadiamc" />
+        <title>ArcadiaMC CZ/SK</title>
       </Head>
       <Component {...pageProps} />
     </>

@@ -15,8 +15,8 @@ const Admins = () => {
         {
          team && team["admins"].map(record => {
             return (
-            <div className="col-md-4 my-2">
-                <div className="card text-bg-secondary mb-3" key={record.id}>
+            <div className="col-md-4 my-2" key={record.id}>
+                <div className="card text-bg-secondary mb-3">
                     <div className="card-body">
                       <img className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} loading="lazy" alt={record.uuid} height={150} width={150} />
                       <h5 className="card-title">{record.username}</h5>

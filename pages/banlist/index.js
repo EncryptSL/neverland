@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react"
 import Image from "next/image";
 import Pagination from "../components/banlist/pagination";
-import Status from "../../components/status/status";
+import Status from "../components/status/status";
 
 const Banlist = ({data}) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -28,17 +28,16 @@ const Banlist = ({data}) => {
                         <i className="fa-solid fa-circle-info"></i> Pokud jsi byl zabanován neprávem podej si žádost na <Link className="link-offset-2 link-underline link-underline-opacity-0" href={"/#discord"}>Discord</Link>.
                     </span>
                 </div>
-                <h1>Banlist</h1>
+                <h1>Přehled trestů</h1>
 
                 <table className="table table-striped table-hover">
                     <thead>
                         <tr>
                           <th scope="col">Hráč</th>
                           <th scope="col">Admin</th>
-                          <th scope="col">Vyprší</th>
-                          <th scope="col">Stav</th>
+                          <th scope="col">Datum Vytvoření</th>
                           <th scope="col">Důvod</th>
-                          <th scope="col">Datum</th>
+                          <th scope="col">Stav</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,10 +47,9 @@ const Banlist = ({data}) => {
                                     <tr key={e?.id}>
                                         <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
                                         <td><Image src={"https://visage.surgeplay.com/face/" + e?.banned_by_uuid} alt={e?.banned_by_name} title={e?.banned_by_name} width="24" height="24" /> {e?.banned_by_name}</td>
-                                        <td>{bansBadges(e?.expire)}</td>
-                                        <td>{e?.active}</td>
-                                        <td>{e?.reason}</td>
                                         <td>{e?.created_at}</td>
+                                        <td>{e?.reason}</td>
+                                        <td>{bansBadges(e?.expire)}</td>
                                     </tr>
                                 )
                             })

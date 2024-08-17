@@ -13,7 +13,6 @@ const Status = () => {
       .then((status) => {
         setData(status)
         setLoading(false)
-        console.log(status)
       })
   }, [])
 

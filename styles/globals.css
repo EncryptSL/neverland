@@ -207,9 +207,19 @@ button:hover {
 }
 
 .shop-nav {
-  background: #3c8527!important;
+  background: #2a5ac5b0!important;
 }
 
+.grow img{
+  transition: 1s ease;
+}
+  
+.grow img:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+}
 
 @-webkit-keyframes breathing {
   0% {
