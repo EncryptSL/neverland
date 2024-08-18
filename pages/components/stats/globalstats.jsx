@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios";
+import Loading from "../ui/loading";
+import DataMissing from "../ui/error/DataMissing";
 
 const Globalstats = () => {
 
@@ -17,15 +19,19 @@ const Globalstats = () => {
 
     if (isLoading) return (
         <>
-          <div className="col-md cover-me container">Načítání</div>
+          <Loading/>
         </>
       )
-    if (!stats) return <p>No server data</p>
+    if (!stats) return (
+      <>
+        <DataMissing />
+      </>
+    )
 
     return (
         <section className="p-5 stats-content">
             <div className="container">
-                <h2>Globální Statistiky</h2>
+                <h2 className="title">Globální Statistiky</h2>
                 <div className="row g-2 d-flex">
                     <div className="col-sm-4">
                         <div className="card">

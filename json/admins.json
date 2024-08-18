@@ -7,6 +7,7 @@
             "uuid": "8dd6b6cb-8de7-4091-884e-062c0d5c074f",
             "badge_text": "OWNER",
             "badge_color": "badge-owner",
+            "description": "Starám se o chod serveru a tým.",
             "background": "owner",
             "instagram": "#"
         },
@@ -16,6 +17,7 @@
             "uuid": "0ba5241b-e841-4908-8da4-e8bec9a8f902",
             "badge_text": "DEVELOPER",
             "badge_color": "badge-developer",
+            "description": "Starám se o vývoj funkcí a server.",
             "background": "developer",
             "instagram": "#"
         },
@@ -25,6 +27,7 @@
             "uuid": "5fda563e-3f43-4001-9707-415dfbf28287",
             "badge_text": "MANAŽER",
             "badge_color": "badge-manager",
+            "description": "Starám se o komunitu a tým.",
             "instagram": "#"
         },
         {
@@ -33,6 +36,7 @@
             "uuid": "2c655f8f-e808-413a-a460-523fd547dc5d",
             "badge_text": "SPRÁVCE SERVERU",
             "badge_color": "badge-server-master",
+            "description": "Starám se o správu serveru.",
             "instagram": "#"
         },
         {
@@ -41,6 +45,7 @@
             "uuid": "1467c4e8-7908-4690-bdbf-b3bd22e88ecb",
             "badge_text": "ADMIN",
             "badge_color": "badge-admin text-white",
+            "description": "Starám se o klid na serveru a ostatní členy týmu.",
             "instagram": "#"
         }
     ],

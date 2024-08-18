@@ -12,7 +12,7 @@ export default function team() {
                     <div className="row">
                         <div className="col-12k">
                             <div className="section-title title-left text-center text-lg-left">
-                                <h1 className="top-sep text-dark">Admin Tým</h1>
+                                <h1 className="top-sep text-dark title">Admin Tým</h1>
                             </div>
                         </div>
                     </div>

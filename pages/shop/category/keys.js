@@ -9,11 +9,11 @@ export default function keys({bundles}) {
         <section className="p-5 shop">
             <div className="container">
                 <Subnav />
-                <h2 className="text-center">Galaktické Klíče</h2>
+                <h2 className="title">Galaktické Klíče</h2>
 
                 <div className="row mt-1">
                     {bundles.map(bundle =>  (
-                        <div className="col-lg-3 mb-3">
+                        <div className="col-lg-3 mb-3" key={bundle?.order}>
                             <div className="card border-primary">
                                 <div className="card-header py-3 text-center text-bg-primary border-primary"><h4 className="my-0 fw-normal">{bundle.title}</h4></div>
                               <div className="card-body text-bg-light">

@@ -4,7 +4,7 @@ thumbnail: "/assets/vip.webp"
 pay_cz: "https://platby.hostify.cz/82906?currency=CZK&payment=VIP%20-%20CZ"
 pay_sk: "https://platby.hostify.cz/82906?currency=EUR&payment=VIP%20-%20SK"
 price: 100,- CZK - 4 Euro/31d
-order: 1
+order: 2
 ---
 **Výhody**
 - /anvil - Oprava věcí

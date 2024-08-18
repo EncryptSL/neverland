@@ -13,7 +13,7 @@ const Header = () => {
       getImage()
   }, [])
     return (
-    <section className="bg-dark text-light p-5 p-lg-3 pt-lg-5 text-center text-sm-start">
+    <section className="bg-header text-light p-5 p-lg-3 pt-lg-5 text-center text-sm-start">
         <div className="container">
           <div className="d-sm-flex align-items-center justify-content-between">
             <div>

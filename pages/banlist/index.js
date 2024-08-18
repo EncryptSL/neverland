@@ -28,7 +28,7 @@ const Banlist = ({data}) => {
                         <i className="fa-solid fa-circle-info"></i> Pokud jsi byl zabanován neprávem podej si žádost na <Link className="link-offset-2 link-underline link-underline-opacity-0" href={"/#discord"}>Discord</Link>.
                     </span>
                 </div>
-                <h1>Přehled trestů</h1>
+                <h1 className="title">Přehled trestů</h1>
 
                 <table className="table table-striped table-hover">
                     <thead>

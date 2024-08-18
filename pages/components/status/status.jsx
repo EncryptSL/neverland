@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react"
 import axios from "axios";
+import Loading from "../ui/loading";
+import DataMissing from "../ui/error/DataMissing";
 
 const Status = () => {
 
@@ -18,20 +20,12 @@ const Status = () => {
 
  if (isLoading) return (
    <>
-     <section id="status" className="p-5">
-       <div className="container">
-         <h3><i className="fa-solid fa-circle-exclamation"></i> Načítání...</h3>
-       </div>
-     </section>
+    <Loading />
    </>
  )
 
  if (!status) return (
-   <section id="status" className="p-5">
-     <div className="container">
-       <h3><i className="fa-solid fa-circle-exclamation"></i> Nepodařilo se načíst data..</h3>
-     </div>
-   </section>
+    <DataMissing />
  )
 
   if (status?.online === false) {

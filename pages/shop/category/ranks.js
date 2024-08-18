@@ -12,10 +12,10 @@ export default function ranks({ranks}) {
                     <div className="alert alert-info mb-3 text-center" role="alert">
                         <span className="fw-bold">Seznámení:</span> Všechny z níže uvedených položek lze získat ZDARMA hraním na serveru (v rámci podmínek EULA). Za herní aktivitu lze vydělávat kredity, za které je zde možné výhody aktivovat nebo vyhrát.
                     </div>
-                    <h2 className="text-center">Ranky a Výhody</h2>
+                    <h2 className="title">Ranky a Výhody</h2>
                         <div className="row justify-content-center">
                             {ranks.map(rank => (
-                            <div className="col-lg-3 mb-3">
+                            <div className="col-lg-3 mb-3" key={rank.order}>
                                 <div className="card border-primary">
                                     <div className="card-header py-3 text-center text-bg-primary"><h4 className="my-0 fw-normal">{rank.title}</h4></div>
                                     <div className="card-body text-bg-light">

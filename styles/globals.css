@@ -4,6 +4,11 @@ body::before {
   content: '';
   height: 60px;
 }
+
+.bg-header {
+  background: url(/assets/header-background.webp) no-repeat center;
+}
+
 .avatar {
   transform: scaleX(-1);
 }
@@ -202,8 +207,8 @@ button:hover {
 
 .shop {
   background: url('/assets/shop_bg.webp');
-  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .shop-nav {
