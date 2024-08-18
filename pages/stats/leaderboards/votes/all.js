@@ -1,10 +1,19 @@
 import React from "react";
-import VotesTable from "../../components/stats/leaderboard/VotesTable";
-import Subnav from "../../components/stats/subnav";
 import axios from "axios";
-import Status from "../../components/status/status";
+import VotesTable from "../../../components/stats/leaderboard/VotesTable";
+import Subnav from "../../../components/stats/subnav";
+import Status from "../../../components/status/status";
 
-const Votes = ({data}) => {
+export async function getServerSideProps() {
+    const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/votes`)
+    const data = res.data
+   
+    return {
+      props: { data },
+    };
+};
+
+export default function Votes({data}) {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
@@ -23,14 +32,3 @@ const Votes = ({data}) => {
         </>
     )
 }
-
-export async function getServerSideProps() {
-    const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/votes`)
-    const data = res.data
-   
-    return {
-      props: { data },
-    };
-};
-
-export default Votes

@@ -35,7 +35,9 @@ const Subnav = () => {
               Ostatní
             </a>
             <ul className="dropdown-menu">
-              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/votes' ? 'active' : ''}`} href="/stats/leaderboards/votes">Nejvíce hlasující</a></li>
+              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/votes/all' ? 'active' : ''}`} href="/stats/leaderboards/votes/all">Nejvíce hlasující</a></li>
+              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/votes/craftlist-month' ? 'active' : ''}`} href="/stats/leaderboards/votes/craftlist-month">Měsíční hlasující craftlist</a></li>
+              <li><a className={`dropdown-item ${router.pathname === '/stats/leaderboards/votes/czechcraft-month' ? 'active' : ''}`} href="/stats/leaderboards/votes/czechcraft-month">Měsíční hlasující czechcraft</a></li>
             </ul>
           </li>
         </ul>

@@ -3,6 +3,7 @@ import Globalstats from "../components/stats/globalstats";
 import Search from "../components/stats/search";
 import Subnav from "../components/stats/subnav";
 import Status from "../components/status/status";
+import CraftListTable from "../components/stats/leaderboard/votifier/months/CraftListTable";
 
 const stats = () => {
 
@@ -16,7 +17,11 @@ const stats = () => {
                 <Search />
             </section>
             <Subnav />
-            <Globalstats />
+            <section className="p-5 stats-content">
+                <div className="container">
+                    <Globalstats />
+                </div>
+            </section>
             <Status />
         </>
     );
