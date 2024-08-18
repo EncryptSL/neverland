@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ServerStatistics from "./status/server-stats";
 
 const About = () => {
 
@@ -23,25 +24,7 @@ const About = () => {
                                 Najdeš zde residence, <span className="fw-bold">tagy, magické boxy, mob arénu</span> s upravenými odměny.
                                 Tak neváhej a zkus si zahrát.
                             </p>
-                            <div className="server-stats">
-                                <div className="row">
-                                    <div className="col-md-4 mb-3">
-                                        <span className="icon"><i className="fa-solid fa-user"></i></span>
-                                        <h3>0</h3>
-                                        <p>Připojilo se celkem</p>
-                                    </div>
-                                    <div className="col-md-4 mb-3">
-                                        <span className="icon"><i className="fa-solid fa-gamepad"></i></span>
-                                        <h3>3h +</h3>
-                                        <p>Průměrně strávený čas</p>
-                                    </div>
-                                    <div className="col-md-4 mb-3">
-                                        <span className="icon"><i className="fa-regular fa-clock"></i></span>
-                                        <h3>0</h3>
-                                        <p>Online hráčů denně</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <ServerStatistics />
                         </div>
                     </div>
                 </div>

@@ -17,9 +17,10 @@ const Banlist = ({data}) => {
 
     return (
         <>
-            <section className="hero text-light p-5 p-lg-3 pt-lg-5 text-center default">
+            <section className="hero bg-header text-light p-5 p-lg-3 pt-lg-5 text-center default">
                 <div className="container">
                     <h1 className="text-center">Banlist</h1>
+                    <p className="col-lg-8 mx-auto fs-5 text-white">Zde najdeš seznam všech zlobivců a jejich hříchy</p>
                 </div>
             </section>
             <section className="p-5 container">
