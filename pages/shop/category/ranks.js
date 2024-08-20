@@ -2,6 +2,7 @@ import React from "react";
 import Subnav from "../../components/shop/subnav";
 import {getRankBundles} from "../../../libs/shop/ranks"
 import Status from "../../components/status/status";
+import EulaNotification from "../../components/shop/eula-notification";
 
 export default function ranks({ranks}) {
     return (
@@ -9,9 +10,7 @@ export default function ranks({ranks}) {
             <section className="p-5 shop">
                 <div className="container">
                     <Subnav />
-                    <div className="alert alert-info mb-3 text-center" role="alert">
-                        <span className="fw-bold">Seznámení:</span> Všechny z níže uvedených položek lze získat ZDARMA hraním na serveru (v rámci podmínek EULA). Za herní aktivitu lze vydělávat kredity, za které je zde možné výhody aktivovat nebo vyhrát.
-                    </div>
+                    <EulaNotification />
                     <h2 className="title">Ranky a Výhody</h2>
                         <div className="row justify-content-center">
                             {ranks.map(rank => (

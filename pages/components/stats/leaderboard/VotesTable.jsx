@@ -14,7 +14,7 @@ export default function VotesTable({data}) {
             </thead>
             <tbody>
                 {
-                    data && data.votes.map(e => {
+                    data && data?.votes?.map(e => {
                         return (
                             <tr key={e?.id}>
                                 <th>{e?.id}</th>

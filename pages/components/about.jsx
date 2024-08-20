@@ -15,15 +15,15 @@ const About = () => {
                         </div>
                     </div>
                     <div className="col-lg-7 d-flex">
-                        <div className="content">
+                        <div className="content text-center">
                             <h2>Něco málo o Serveru</h2>
+                            <p>Ahojte kamaráti!</p>
                             <p>
-                                Minecraft Server ArcadiaMc, patří do skupiny <span className="fw-bold">ekonomického</span>, <span className="fw-bold">semi-rpg</span> a <span className="fw-bold">survival</span> serveru.
-                                Naším cílem je nabídnout hráčům, <span className="fw-bold">klidnou komunitu</span> a přátelský přístup.
-                                Můžeme se pyšnit odladěnou ekonomikou, <span className="fw-bold">denními odměny</span>, pravidelné <span className="fw-bold">automatické eventy</span> které potřebují hráčskou spolupráci.
-                                Najdeš zde residence, <span className="fw-bold">tagy, magické boxy, mob arénu</span> s upravenými odměny.
-                                Tak neváhej a zkus si zahrát.
+                                Chceli by sme vám predstaviť náš ekonomický survival server ArcadiaMC. Nájdete tu <span className="fw-bold">priateľskú komunitu</span> a  skvelý admin team, ktorý vám v prípade núdze veľmi rád pomôže. 
+                                Môžete sa tešiť na <span className="fw-bold">denné odmeny, tagy, magické boxy, arény a predovšetkým na eventy</span>, ktoré spájajú našu komunitu a vás ako hráčov. 
+                                Neváhajte a prídite si ku nám zahrať a odreagovať sa. 
                             </p>
+                            <p>S pozdravom <span className="fw-bold">ArcadiaMC team</span>.</p>
                             <ServerStatistics />
                         </div>
                     </div>

@@ -16,9 +16,9 @@ export default function czechcraft({stats}) {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
-                <h1 className="text-body-emphasis">TOP 30 MĚSÍČNÍCH HLASUJÍCÍCH CZECH-CRAFT</h1>
+                <h1 className="text-body-emphasis stats-primary-title">TOP 30 MĚSÍČNÍCH HLASUJÍCÍCH CZECH-CRAFT</h1>
                 <p className="fs-5 text-white">
-                  Celkem hlasů za měsíc {stats.query.total}
+                  Celkem hlasů za měsíc {stats?.query?.total ? stats?.query?.total : 0}
                 </p>
             </section>
             <Subnav />

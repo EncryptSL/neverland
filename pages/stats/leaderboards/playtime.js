@@ -10,7 +10,7 @@ const Playtime = ({data}) => {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
-                <h1 className="text-body-emphasis">TOP 30 NEJAKTIVNĚJŠÍCH HRÁČŮ</h1>
+                <h1 className="text-body-emphasis stats-primary-title">TOP 30 NEJAKTIVNĚJŠÍCH HRÁČŮ</h1>
             </section>
             <Subnav />
             <section className="p-5 stats-content">

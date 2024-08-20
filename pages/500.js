@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-export default function Custom404() {
+export default function Custom500() {
     return (
         <section className="bg-dark text-light">
             <div className="container w-50 p-5">
@@ -8,8 +6,8 @@ export default function Custom404() {
                     <div className="col-lg-6 d-flex align-items-center justify-content-center">
                         <div>
                             <h1 className="fw-1">Jejda !</h1>
-                            <p>404 - Not found</p>
-                            <p>Požadovaná stránka nebyla nalezena, pokud myslíte že je to chyba kontaktujte správce serveru.</p>
+                            <p>500 - Internal server error</p>
+                            <p>Zase se někdo hrabal kde neměl, pokud myslíte že je to chyba kontaktujte správce serveru.</p>
                         </div>
                     </div>
                     <div className="col-lg-6 d-flex align-items-center justify-content-center">

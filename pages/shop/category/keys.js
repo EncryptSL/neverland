@@ -2,6 +2,7 @@ import React from "react"
 import Subnav from "../../components/shop/subnav";
 import {getKeyBundles} from "../../../libs/shop/keys"
 import Status from "../../components/status/status";
+import EulaNotification from "../../components/shop/eula-notification";
 
 export default function keys({bundles}) {
     return (
@@ -9,6 +10,7 @@ export default function keys({bundles}) {
         <section className="p-5 shop">
             <div className="container">
                 <Subnav />
+                <EulaNotification />
                 <h2 className="title">Galaktické Klíče</h2>
 
                 <div className="row mt-1">

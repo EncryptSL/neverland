@@ -8,7 +8,7 @@ const Credits = ({data}) => {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
-                <h1 className="text-body-emphasis">TOP 30 NEJBOHATŠÍCH S KREDITY</h1>
+                <h1 className="text-body-emphasis stats-primary-title">TOP 30 NEJBOHATŠÍCH S KREDITY</h1>
                 <p className="fs-5 text-white">
                   Celkem kreditů {data.query.total}
                 </p>

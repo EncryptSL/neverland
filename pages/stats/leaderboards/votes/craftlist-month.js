@@ -16,7 +16,7 @@ export default function craftlist({stats}) {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
-                <h1 className="text-body-emphasis">TOP 30 MĚSÍČNÍCH HLASUJÍCÍCH CRAFTLIST</h1>
+                <h1 className="text-body-emphasis stats-primary-title">TOP 30 MĚSÍČNÍCH HLASUJÍCÍCH CRAFTLIST</h1>
                 <p className="fs-5 text-white">Celkem hlasů za měsíc {stats.query.total}</p>
                 <p className="fs-5 text-white">Celkem skóre za měsíc {stats.query.total_score}</p>
             </section>

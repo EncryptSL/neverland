@@ -10,7 +10,7 @@ const shop = ({categories}) => {
             <div className="container">
                 <Subnav />
                 <div className="alert alert-info mb-3 text-center" role="alert">
-                  <i className="fa-solid fa-circle-info"></i> Obchod NeverLand je pouze přehled nabízeních balíčků a ranků.
+                  <i className="fa-solid fa-circle-info"></i> Obchod ArcadiaMC je pouze přehled nabízeních balíčků a ranků.
                 </div>
                 <h1 className="title">SHOP KATEGORIE</h1>
                 <div className="row justify-content-center text-center">

@@ -61,7 +61,7 @@ export default function ServerStatistics() {
                 </div>
                 <div className="col-md-4 mb-3">
                     <span className="icon"><i className="fa-regular fa-clock"></i></span>
-                    <h3>0</h3>
+                    <h3>{statistics?.total_average_joins}</h3>
                     <p>Online hráčů denně</p>
                 </div>
             </div>

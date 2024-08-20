@@ -1,3 +1,5 @@
+@import url(Stats.module.css);
+
 body::before {
   font-family: 'Ubuntu', sans-serif!important;
   display: block;
@@ -55,7 +57,11 @@ body::before {
 
 .stats-hero {
   text-transform: uppercase;
-  background: url(/assets/stats_wallpaper.webp) repeat top center;
+  background: url(/assets/stats_wallpaper.webp) repeat center;
+}
+
+.stats-primary-title {
+  color: rgb(181 210 251);
 }
 
 .stats-content {
@@ -197,6 +203,10 @@ button:hover {
     color: #2c6dff;
 }
 
+.server-stats {
+  color: darkslateblue;
+}
+
 .content .server-stats {
   text-align: center;
 }
@@ -212,7 +222,7 @@ button:hover {
 }
 
 .shop-nav {
-  background: #2a5ac5b0!important;
+  background: #ab2bad59!important;
 }
 
 .grow img{

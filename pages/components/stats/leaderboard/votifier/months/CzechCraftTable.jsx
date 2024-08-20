@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 export default function CzechCraftTable({stats}) {
+
     return (
         <table className="table table-striped table-hover">
             <thead>
@@ -12,7 +13,7 @@ export default function CzechCraftTable({stats}) {
             </thead>
             <tbody>
                 {
-                    stats && stats.votes.map(e => {
+                    stats && stats?.votes?.map(e => {
                         return (
                             <tr key={e?.id}>
                                 <th>{e?.id}</th>

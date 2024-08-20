@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const Vote = () => {
 
+export default function Vote() {
   const submitVote = async(event) => {
     event.preventDefault();
 
@@ -18,7 +18,7 @@ const Vote = () => {
         <section id="vote" className="p-5">
             <div className="container">
                 <div className="row">
-                <div className="col-md-4">
+                <div className="col-lg-6">
                         <form className="flex flex-col" method="post" onSubmit={submitVote}>
                             <label htmlFor="service">Kde chceš Hlasovat</label>
                               <select className="form-select" name="service" aria-label="service" required>
@@ -34,7 +34,7 @@ const Vote = () => {
                             <button type="submit" className="btn btn-secondary btn-sm">HLASOVAT</button>
                         </form>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-lg-6">
                         <h1>HLASOVÁNÍ</h1>
                         <span className="fw-small">
                             <p>Hlasováním za náš server získáš odměny.</p>
@@ -59,7 +59,4 @@ const Vote = () => {
             </div>           
         </section>
     )
-
-};
-
-export default Vote;
+}
