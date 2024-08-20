@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Custom500() {
     return (
         <section className="bg-dark text-light">
