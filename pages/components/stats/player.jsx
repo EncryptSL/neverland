@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { time } from "../ui/time";
+import Time from "../ui/time";
 
 function badges(group) {
     if (group == "owner") {
@@ -54,13 +54,13 @@ export default function Player({player}) {
                                     <div className="row">
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500" suppressHydrationWarning={true}>
-                                                <span>{time(player.first_join)}</span>
+                                                <span><Time time={player.first_join} /></span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-right-to-bracket"></i> První Připojení</p>
                                         </div>
                                         <div className="col-4">
                                             <div className="font-size-h3 font-w500" suppressHydrationWarning={true}>
-                                                <span>{time(player.last_join)}</span>
+                                                <span><Time time={player.last_join} /></span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-clock-rotate-left"></i> Poslední Připojení</p>
                                         </div>
@@ -106,7 +106,7 @@ export default function Player({player}) {
                                               <tr>
                                                 <td className="text-start">Poslední hlasování</td>
                                                 <td className="text-center" suppressHydrationWarning={true}>
-                                                    {time(player.last_vote)}
+                                                    <Time time={player.last_vote} />
                                                 </td>
                                               </tr>
                                             </tbody>
