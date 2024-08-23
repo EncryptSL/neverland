@@ -5,6 +5,7 @@ export default function WidgetVotes({data, title, link}) {
               <div className="card-header text-center text-bg-dark"><h4 className="my-0 fw-normal">{title}</h4></div>
                 <div className="card-body text-bg-light">
                   <h5 className="text-center">TOP 5</h5>
+                  {data?.error && <p className="text-center">Nemám žádná data !</p>}
                   <table className="table table-striped table-hover">
                       <tbody>
                           {

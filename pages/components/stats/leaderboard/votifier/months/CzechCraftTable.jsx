@@ -1,6 +1,11 @@
 import Image from "next/image"
+import DataMissing from "../../../../ui/error/DataMissing"
 
 export default function CzechCraftTable({data}) {
+
+    if (data.error && data.error) {
+        return <DataMissing />
+    }
 
     return (
         <table className="table table-striped table-hover">

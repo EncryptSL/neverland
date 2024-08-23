@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import ServerStatistics from "./status/server-stats";
+import dynamic from "next/dynamic";
+import Loading from "./ui/loading";
+
+const DynamicStatisticComponent = dynamic(() => import('./status/server-stats'), {
+    loading: () => "Načítám statistiky..."
+})
 
 export default function About() {
     return (
@@ -23,7 +28,7 @@ export default function About() {
                                 Neváhajte a prídite si ku nám zahrať a odreagovať sa. 
                             </p>
                             <p>S pozdravom <span className="fw-bold">ArcadiaMC team</span>.</p>
-                            <ServerStatistics />
+                            <DynamicStatisticComponent />
                         </div>
                     </div>
                 </div>

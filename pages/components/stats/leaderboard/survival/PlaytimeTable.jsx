@@ -22,8 +22,8 @@ const PlaytimeTable = ({data}) => {
                                 <th>{e?.id}</th>
                                 <th><Avatar id={e?.uuid} alt={e?.username} width={24} height={24} />{e?.username}</th>
                                 <td>{e?.playedtime}</td>
-                                <td><Time time={e?.firt_join} /></td>
-                                <td><Time time={e?.last_join} /></td>
+                                <td><Time time={e?.first_join ? e?.first_join : 0} /></td>
+                                <td><Time time={e?.last_join ? e?.last_join : 0} /></td>
                             </tr>
                         )
                     })
