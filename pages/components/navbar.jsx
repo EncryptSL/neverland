@@ -1,9 +1,9 @@
 import React from "react";
-import NavActiveLink from "./ui/nav-active-link";
+import NavActiveLink from "./ui/active-link";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+    <div className="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
     <div className="container">
       <a href="/" className="navbar-brand">ARCADIAMC CZ/SK</a>
 
@@ -14,23 +14,23 @@ export default function Navbar() {
       <div className="collapse navbar-collapse" id="navmenu">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <NavActiveLink path="/#aboutserver" scroll={true} name={"O SERVERU"}/>
+            <NavActiveLink path="/#aboutserver" scroll={true} name={"O SERVERU"} active="text-white"/>
           </li>
           <li className="nav-item">
-            <NavActiveLink path="/#vote" scroll={true} name={"HLASOVÁNÍ"}/>
+            <NavActiveLink path="/#vote" scroll={true} name={"HLASOVÁNÍ"} active="text-white"/>
           </li>
           <li className="nav-item">
-            <NavActiveLink path="/stats" scroll={false} name={"STATISTIKY"}/>
+            <NavActiveLink path="/stats" scroll={false} name={"STATISTIKY"} active="text-white"/>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               OSTATNÍ
             </a>
             <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="/team">ADMIN TÝM</a></li>
-              <li><a className="dropdown-item" href="/shop/category/ranks">VIP</a></li>
-              <li><a className="dropdown-item" href="/banlist">BANLIST</a></li>
-              <li><a className="dropdown-item" href="/pravidla">PRAVIDLA</a></li>
+              <li><NavActiveLink path="/team" scroll={false} name={"ADMIN TÝM"} className="dropdown-item"/></li>
+              <li><NavActiveLink path="/shop/category/ranks" scroll={false} name={"VIP"} className="dropdown-item"/></li>
+              <li><NavActiveLink path="/banlist" scroll={false} name={"BANLIST"} className="dropdown-item"/></li>
+              <li><NavActiveLink path="/pravidla" scroll={false} name={"PRAVIDLA"} className="dropdown-item"/></li>
             </ul>
           </li>
           <li className="nav-item">
@@ -39,6 +39,6 @@ export default function Navbar() {
         </ul>
       </div>
     </div>
-  </nav>
+  </div>
   )
 };

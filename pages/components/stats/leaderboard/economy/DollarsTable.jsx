@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "../../../avatar";
 
-const MoneyTable = ({data}) => {
+export default function DollarsTable({data}) {
     return (
         <table className="table table-striped table-hover">
             <thead>
@@ -26,6 +26,4 @@ const MoneyTable = ({data}) => {
             </tbody>
         </table>
     )
-}
-
-export default MoneyTable;
+};

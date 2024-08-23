@@ -21,6 +21,10 @@ body::before {
   padding: 15rem!important;
 }
 
+.error-image {
+  transform: rotate(-12deg);
+}
+
 @media (min-width: 768px) {
 .news-input {
   width: 50%;

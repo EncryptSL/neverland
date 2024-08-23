@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
 import React from "react";
+import NavActiveLink from "../ui/active-link";
 
 export default function subnav() {
-  const router = useRouter()
-
   return (
       <>
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark mb-4 shop-nav">
@@ -14,13 +13,13 @@ export default function subnav() {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <a className={`nav-link ${router.pathname === '/shop' ? 'active' : ''}`} aria-current="page" href="/shop">KATEGORIE</a>
+                    <NavActiveLink path={'/shop'} name={'KATEGORIE'} active="active"></NavActiveLink>
                   </li>
                   <li className="nav-item">
-                    <a className={`nav-link ${router.pathname === '/shop/category/ranks' ? 'active' : ''}`} aria-current="page" href="/shop/category/ranks">RANKY</a>
+                    <NavActiveLink path={'/shop/category/ranks'} name={'RANKY'} active="active"></NavActiveLink>
                   </li>
                   <li className="nav-item">
-                    <a className={`nav-link ${router.pathname === '/shop/category/keys' ? 'active' : ''}`} aria-current="page" href="/shop/category/keys">GALAKTICKÉ KLÍČE</a>
+                    <NavActiveLink path={'/shop/category/keys'} name={'GALAKTICKÉ KLÍČE'} active="active"></NavActiveLink>
                   </li>
                 </ul>
               </div>

@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
+import { Bounce, toast } from "react-toastify";
 
 const Search = () => {
-
     
 const submitSearch = async(event) => {
     event.preventDefault();
@@ -12,7 +12,18 @@ const submitSearch = async(event) => {
         var username = res.data[0].username
         window.location.replace(`/stats/player/${username}`)
     }).catch(error => {
-        alert("Tento hráče neexistuje !")
+      toast.error('Nepodařilo se načíst data tohoto hráče.', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+      })
+      return null
     })
 }
 

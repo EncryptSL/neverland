@@ -1,9 +1,20 @@
-import React from "react"
-import axios from "axios"
-import Image from "next/image"
-import Status from "../../components/status/status";
+import Image from "next/image";
+import { time } from "../ui/time";
 
-const PlayerStats = ({ player }) => {
+function badges(group) {
+    if (group == "owner") {
+        return "text-bg-danger";
+    } else if (group == "developer") {
+        return "text-bg-warning";
+    } else if (group == "admin") {
+        return "text-bg-primary";
+    } else if (group == "moderator") {
+        return "text-bg-success";
+    }
+
+}
+
+export default function Player({player}) {
     return (
         <>
             <section className="p-5 stats-hero">
@@ -42,14 +53,14 @@ const PlayerStats = ({ player }) => {
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-4">
-                                            <div className="font-size-h3 font-w500">
-                                                <span>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.first_join))}</span>
+                                            <div className="font-size-h3 font-w500" suppressHydrationWarning={true}>
+                                                <span>{time(player.first_join)}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-right-to-bracket"></i> První Připojení</p>
                                         </div>
                                         <div className="col-4">
-                                            <div className="font-size-h3 font-w500">
-                                                <span>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.last_join))}</span>
+                                            <div className="font-size-h3 font-w500" suppressHydrationWarning={true}>
+                                                <span>{time(player.last_join)}</span>
                                             </div>
                                             <p className="text-muted mt-2 mb-0 fw-bold"><i className="fa-solid fa-clock-rotate-left"></i> Poslední Připojení</p>
                                         </div>
@@ -94,8 +105,8 @@ const PlayerStats = ({ player }) => {
                                               </tr>
                                               <tr>
                                                 <td className="text-start">Poslední hlasování</td>
-                                                <td className="text-center">
-                                                    {new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(player.last_vote))}
+                                                <td className="text-center" suppressHydrationWarning={true}>
+                                                    {time(player.last_vote)}
                                                 </td>
                                               </tr>
                                             </tbody>
@@ -129,33 +140,6 @@ const PlayerStats = ({ player }) => {
                     </div>
                 </div>
             </section>
-            <Status />
         </>
     )
-
 }
-
-function badges(group) {
-    if (group == "owner") {
-        return "text-bg-danger";
-    } else if (group == "developer") {
-        return "text-bg-warning";
-    } else if (group == "admin") {
-        return "text-bg-primary";
-    } else if (group == "moderator") {
-        return "text-bg-success";
-    }
-
-}
-
-export async function getServerSideProps({params}) {
-    const response = await axios.get(`https://encryptsl.cekuj.net/api/minecraft/player/${params.nickname}`)
-    const player = await response.data[0]
-    return {
-        props: {
-            player
-        }
-    }
-}
-
-export default PlayerStats;

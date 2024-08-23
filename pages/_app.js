@@ -5,6 +5,7 @@ import '../styles/team.css'
 import Script from 'next/script';
 import { Suspense } from 'react';
 import Loading from './components/ui/loading';
+import Navbar from './components/navbar';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="encryptsl, minecraft, arcadiamc" />
         <title>ArcadiaMC CZ/SK</title>
       </Head>
+      <Navbar />
       <Suspense fallback={<Loading />}>
         <Component {...pageProps} />
       </Suspense>

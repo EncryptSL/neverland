@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/components/ui/time.jsx", "pages/components/ui/nav-active-link.jsx", "pages/components/ui/loading.jsx", "pages/components/ui/badge.jsx", "pages/components/team/moderators.jsx"  ],
   "exclude": [
     "node_modules"
   ]

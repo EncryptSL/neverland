@@ -1,8 +1,8 @@
-import axios from "axios";
 import Subnav from "../../../components/stats/subnav";
 import Status from "../../../components/status/status";
 import Loading from "../../../components/ui/loading";
 import dynamic from "next/dynamic";
+import { fetchMinecraftStatistics } from "../../../../actions/fetchMinecraftStatistics";
 
 const DynamicVotesTable = dynamic(() => import('../../../components/stats/leaderboard/VotesTable'), {
     loading: () => <Loading />,
@@ -29,8 +29,8 @@ export default function Votes({data}) {
 }
 
 export async function getServerSideProps() {
-    const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/votes`)
-    const data = res.data
+    const res = await fetchMinecraftStatistics("minecraft/stats/votes")
+    const data = res
    
     return {
       props: { data },

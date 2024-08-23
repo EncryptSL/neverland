@@ -10,12 +10,7 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
     <div>
       <ul className="pagination">
         {pages.map((page) => (
-          <li
-            key={page}
-            className={
-              page === currentPage ? "active" : "page-item"
-            }
-          >
+          <li key={page} className={page === currentPage ? "active" : "page-item"}>
             <a className="page-link" onClick={() => onPageChange(page)}>
               {page}
             </a>

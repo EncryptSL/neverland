@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function CraftListTable({stats}) {
+export default function CraftListTable({data}) {
     return (
         <table className="table table-striped table-hover">
             <thead>
@@ -15,7 +15,7 @@ export default function CraftListTable({stats}) {
             </thead>
             <tbody>
                 {
-                    stats && stats?.votes?.map((e, index) => {
+                    data && data?.votes?.map((e, index) => {
                         return (
                             <tr key={index}>
                                 <th>{e?.id}</th>

@@ -4,6 +4,8 @@ import Subnav from "../components/stats/subnav";
 import Status from "../components/status/status";
 import dynamic from "next/dynamic";
 import Loading from "../components/ui/loading";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 const DynamicGlobalStats = dynamic(() => import("../components/stats/globalstats"), {
     loading: () => <Loading />
@@ -26,6 +28,7 @@ export default function stats() {
                 </div>
             </section>
             <Status />
+            <ToastContainer></ToastContainer>
         </>
     );
 }

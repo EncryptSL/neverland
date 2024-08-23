@@ -1,5 +1,6 @@
 import React from "react"
 import Avatar from "../../../avatar"
+import { time } from "../../../ui/time"
 
 const PlaytimeTable = ({data}) => {
     return (
@@ -21,8 +22,8 @@ const PlaytimeTable = ({data}) => {
                                 <th>{e?.id}</th>
                                 <th><Avatar id={e?.uuid} alt={e?.username} width={24} height={24} />{e?.username}</th>
                                 <td>{e?.playedtime}</td>
-                                <td>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(e?.first_join))}</td>
-                                <td>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(e?.last_join))}</td>
+                                <td>{time(e?.first_join)}</td>
+                                <td>{time(e?.last_join)}</td>
                             </tr>
                         )
                     })

@@ -1,5 +1,4 @@
 import React from "react";
-import Loading from "../../ui/loading";
 import Avatar from "../../avatar";
 
 export default function VotesTable({data}) {
@@ -14,7 +13,7 @@ export default function VotesTable({data}) {
                 </tr>
             </thead>
             <tbody>
-                {data ? data?.votes?.map((e, index) => {
+                {data && data?.votes?.map((e, index) => {
                         return (
                             <tr key={index}>
                                 <th>{e?.id}</th>
@@ -22,7 +21,7 @@ export default function VotesTable({data}) {
                                 <td>{e?.vote}</td>
                             </tr>
                         )
-                }) : <Loading />}
+                })}
             </tbody>
         </table>
     )

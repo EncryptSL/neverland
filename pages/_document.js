@@ -15,7 +15,6 @@ export default function Document() {
                 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&amp;display=swap" rel="stylesheet"/>
             </Head>
             <body>
-                <Navbar />
                 <Main />
                 <NextScript />
                 <footer className="p-5 bg-dark text-white text-center position-relative">

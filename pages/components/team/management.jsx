@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import useSWR from "swr";
 import Loading from "../ui/loading";
+import Badge from "../ui/badge";
 
 const fetcher = url => fetch(url).then(r => r.json())
 
@@ -17,8 +18,8 @@ const Management = () => {
                                 <div className="card-body grow">
                                   <Image className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} loading="lazy" alt={record.uuid} height={150} width={150} />
                                   <h5 className="card-title">{record.username}</h5>
-                                  <p className={`text-uppercase mb-0 badge ${record.badge_color}`}>{record.badge_text}</p>
-                                  <p><blockquote class="blockquote">{record?.description}</blockquote></p>
+                                  <Badge color={record.badge_color} text={record.badge_text} />
+                                  <p><blockquote className="blockquote">{record?.description}</blockquote></p>
                                 </div>
                             </div>
                         </div>

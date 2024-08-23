@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "../../../avatar";
 
-const CreditsTable = ({data}) => {
+export default function CreditsTable({data}) {
     return (
         <table className="table table-striped table-hover">
             <thead>
@@ -27,4 +27,3 @@ const CreditsTable = ({data}) => {
         </table>
     )
 }
-export default CreditsTable;
