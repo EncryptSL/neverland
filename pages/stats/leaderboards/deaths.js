@@ -1,10 +1,15 @@
-import React from "react";
 import axios from "axios";
 import Subnav from "../../components/stats/subnav";
-import DeathsTable from "../../components/stats/leaderboard/survival/DeathsTable";
 import Status from "../../components/status/status";
+import dynamic from "next/dynamic";
+import Loading from "../../components/ui/loading";
 
-const Deaths = ({data}) => {
+
+const DynamicDeathsTable = dynamic(() => import("../../components/stats/leaderboard/survival/DeathsTable"), {
+    loading: () => <Loading />
+})
+
+export default function Deaths({data}) {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
@@ -16,7 +21,7 @@ const Deaths = ({data}) => {
             <Subnav />
             <section className="p-5 stats-content">
                 <div className="container">
-                    <DeathsTable data={data} />
+                    <DynamicDeathsTable data={data} />
                 </div>
             </section>
             <Status />
@@ -32,5 +37,3 @@ export async function getServerSideProps() {
       props: { data },
     };
 };
-
-export default Deaths;

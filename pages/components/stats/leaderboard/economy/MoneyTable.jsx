@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Avatar from "../../../avatar";
 
 const MoneyTable = ({data}) => {
     return (
@@ -13,11 +13,11 @@ const MoneyTable = ({data}) => {
             </thead>
             <tbody>
                 {
-                    data && data.balances.map(e => {
+                    data && data.balances.map((e, index) => {
                         return (
-                            <tr key={e?.id}>
+                            <tr key={index}>
                                 <th>{e?.id}</th>
-                                <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} decoding="async" alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
+                                <th><Avatar id={e?.uuid} alt={e?.username} width={24} height={24} /> {e?.username}</th>
                                 <td>${e?.money}</td>
                             </tr>
                         )

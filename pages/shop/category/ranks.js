@@ -1,3 +1,5 @@
+'use-client'
+
 import React from "react";
 import Subnav from "../../components/shop/subnav";
 import {getRankBundles} from "../../../libs/shop/ranks"

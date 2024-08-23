@@ -1,12 +1,14 @@
-import React from "react";
 import axios from "axios";
 import Subnav from "../../components/stats/subnav";
-import PlaytimeTable from "../../components/stats/leaderboard/survival/PlaytimeTable";
 import Status from "../../components/status/status";
+import dynamic from "next/dynamic";
+import Loading from "../../components/ui/loading";
 
+const DynamicPlayTimeTable = dynamic(() => import("../../components/stats/leaderboard/survival/PlaytimeTable"), {
+    loading: () => <Loading />
+})
 
-const Playtime = ({data}) => {
-
+export default function Playtime({data}) {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
@@ -15,7 +17,7 @@ const Playtime = ({data}) => {
             <Subnav />
             <section className="p-5 stats-content">
                 <div className="container">
-                    <PlaytimeTable data={data} />
+                    <DynamicPlayTimeTable data={data} />
                 </div>
             </section>
             <Status />
@@ -31,5 +33,3 @@ export async function getServerSideProps() {
       props: { data },
     };
 };
-
-export default Playtime;

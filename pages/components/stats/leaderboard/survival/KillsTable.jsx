@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image"
+import Avatar from "../../../avatar"
 
 
 const KillsTable = ({data}) => {
@@ -14,11 +14,11 @@ const KillsTable = ({data}) => {
             </thead>
             <tbody>
                 {
-                    data && data.kills.map(e => {
+                    data && data.kills.map((e, index) => {
                         return (
-                            <tr key={e?.id}>
+                            <tr key={index}>
                                 <th>{e?.id}</th>
-                                <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} decoding="async" alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
+                                <th><Avatar id={e?.uuid} alt={e?.username} width={24} height={24} /> {e?.username}</th>
                                 <td>{e?.kills}</td>
                             </tr>
                         )

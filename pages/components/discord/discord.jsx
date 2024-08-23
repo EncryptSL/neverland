@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Discord = () => {
+export default function Discord() {
     return (
         <section className="discord-section p-5" id="discord">
             <div className="container">
@@ -31,5 +31,3 @@ const Discord = () => {
         </section>
     )
 }
-
-export default Discord

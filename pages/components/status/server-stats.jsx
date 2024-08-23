@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react"
-import DataMissing from "../ui/error/DataMissing"
-import Loading from "../ui/loading"
-
 
 export default function ServerStatistics() {
 
@@ -10,11 +7,10 @@ export default function ServerStatistics() {
   
     useEffect(() => {
       setLoading(true)
-      axios.get('//encryptsl.cekuj.net/api/minecraft/stats/server').then((res) => res.data)
-        .then((statistics) => {
-            setStatisctics(statistics)
-          setLoading(false)
-        })
+      fetch("https://encryptsl.cekuj.net/api/minecraft/stats/server").then((res) => res.json()).then((status) => {
+        setStatisctics(status)
+        setLoading(false)
+      })
     }, [])
 
     if (isLoading) return (

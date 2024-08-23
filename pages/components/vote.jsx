@@ -20,12 +20,13 @@ export default function Vote() {
                 <div className="row">
                 <div className="col-lg-6">
                         <form className="flex flex-col" method="post" onSubmit={submitVote}>
-                            <label htmlFor="service">Kde chceš Hlasovat</label>
-                              <select className="form-select" name="service" aria-label="service" required>
+                            <label htmlFor="service">Kde chceš Hlasovat
+                              <select id="service" className="form-select" name="service" aria-label="service" required>
                                   <option disabled={false} value={""}>Vyber prosím službu</option>
                                   <option value="czech-craft">Czech-Craft</option>
                                   <option value="craftlist">Craftlist</option>
                               </select>
+                              </label>
                               <div className="mb-3">
                                 <label htmlFor="nick" className="form-label">Herní Nick</label>
                                 <input type="text" className="form-control" id="nick" name="nick" aria-describedby="nickName" required/>

@@ -1,3 +1,5 @@
+'use-client'
+
 export default function Loading() {
     return (
         <section id="loading" className="p-5">

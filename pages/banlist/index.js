@@ -1,4 +1,5 @@
-'use-client';
+'use-client'
+
 import React from "react";
 import Link from "next/link";
 import axios from "axios";
@@ -7,7 +8,16 @@ import Image from "next/image";
 import Pagination from "../components/banlist/pagination";
 import Status from "../components/status/status";
 
-const Banlist = ({data}) => {
+function bansBadges($type) {
+    if ($type === "Zrušen")
+        return (<span className="badge bg-info">{$type}</span>)
+    else if ($type === "Permanentní")
+        return (<span className="badge bg-danger">{$type}</span>)
+    else 
+        return $type
+}
+
+export default function Banlist({data}) {
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 20;
    
@@ -68,14 +78,7 @@ const Banlist = ({data}) => {
         </>
     )
 }
-function bansBadges($type) {
-    if ($type === "Zrušen")
-        return (<span className="badge bg-info">{$type}</span>)
-    else if ($type === "Permanentní")
-        return (<span className="badge bg-danger">{$type}</span>)
-    else 
-        return $type
-}
+
 export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/banlist/`)
     const data = res.data
@@ -84,5 +87,3 @@ export async function getServerSideProps() {
       props: { data },
     };
 };
-
-export default Banlist;

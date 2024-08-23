@@ -1,3 +1,5 @@
+"use-client"
+
 import React from "react";
 import { marked } from "marked";
 import matter from "gray-matter";

@@ -13,9 +13,9 @@ export default function CzechCraftTable({stats}) {
             </thead>
             <tbody>
                 {
-                    stats && stats?.votes?.map(e => {
+                    stats && stats?.votes?.map((e, index) => {
                         return (
-                            <tr key={e?.id}>
+                            <tr key={index}>
                                 <th>{e?.id}</th>
                                 <th><Image src={"https://visage.surgeplay.com/face/" + e?.username} decoding="async" title={e?.username} width="24" height="24"/> {e?.username}</th>
                                 <td>{e?.vote}</td>

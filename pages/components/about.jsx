@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ServerStatistics from "./status/server-stats";
 
-const About = () => {
-
+export default function About() {
     return (
         <section id="aboutserver" className="p-5 about-server">
             <div className="container mt-4">
@@ -11,7 +10,7 @@ const About = () => {
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="figure">
-                            <Image src={"/assets/clear_skin.png"} priority alt="img" decoding="async" height="377" width="450" /> 
+                            <Image src={"/assets/clear_skin.png"} priority={1} alt="img" decoding="async" height="377" width="450" /> 
                         </div>
                     </div>
                     <div className="col-lg-7 d-flex">
@@ -31,7 +30,4 @@ const About = () => {
             </div>
         </section>
     )
-
 }
-
-export default About

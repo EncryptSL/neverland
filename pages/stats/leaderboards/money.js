@@ -1,10 +1,14 @@
-import React from "react";
 import Subnav from "../../components/stats/subnav";
 import axios from "axios";
-import MoneyTable from "../../components/stats/leaderboard/economy/MoneyTable";
 import Status from "../../components/status/status";
+import dynamic from "next/dynamic";
+import Loading from "../../components/ui/loading";
 
-const Money = ({data}) => {
+const DynamicMoneyTable = dynamic(() => import("../../components/stats/leaderboard/economy/MoneyTable"), {
+    loading: () => <Loading />
+})
+
+export default function Money({data}) {
     return (
         <>
             <section className="stats-hero p-5 text-center bg-body-tertiary rounded-3">
@@ -16,14 +20,13 @@ const Money = ({data}) => {
             <Subnav />
             <section className="p-5 stats-content">
                 <div className="container">
-                    <MoneyTable data={data} />
+                    <DynamicMoneyTable data={data} />
                 </div>
             </section>
             <Status />
         </>
     )
 }
-
 
 export async function getServerSideProps() {
     const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/money`)
@@ -33,5 +36,3 @@ export async function getServerSideProps() {
       props: { data },
     };
 };
-
-export default Money

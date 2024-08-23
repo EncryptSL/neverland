@@ -1,16 +1,12 @@
 import axios from "axios";
 import Subnav from "../../../components/stats/subnav";
 import Status from "../../../components/status/status";
-import CraftListTable from "../../../components/stats/leaderboard/votifier/months/CraftListTable";
+import dynamic from "next/dynamic";
+import Loading from "../../../components/ui/loading";
 
-export async function getServerSideProps() {
-    const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/craftlist`)
-    const stats = res.data
-   
-    return {
-      props: { stats },
-    };
-};
+const DynamicCraftListTable = dynamic(() => import('../../../components/stats/leaderboard/votifier/months/CraftListTable'), {
+    loading: () => <Loading />,
+})
 
 export default function craftlist({stats}) {
     return (
@@ -23,10 +19,19 @@ export default function craftlist({stats}) {
             <Subnav />
             <section className="p-5 stats-content">
                 <div className="container">
-                    <CraftListTable stats={stats} />
+                    <DynamicCraftListTable stats={stats} />
                 </div>
             </section>
             <Status />
         </>
     )
 }
+
+export async function getServerSideProps() {
+    const res = await axios.get(`//encryptsl.cekuj.net/api/minecraft/stats/craftlist`)
+    const stats = res.data
+   
+    return {
+      props: { stats },
+    };
+};

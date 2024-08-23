@@ -1,8 +1,13 @@
-import React from "react";
-import Globalstats from "../components/stats/globalstats";
+import React, { Suspense } from "react";
 import Search from "../components/stats/search";
 import Subnav from "../components/stats/subnav";
 import Status from "../components/status/status";
+import dynamic from "next/dynamic";
+import Loading from "../components/ui/loading";
+
+const DynamicGlobalStats = dynamic(() => import("../components/stats/globalstats"), {
+    loading: () => <Loading />
+})
 
 export default function stats() {
     return (
@@ -17,7 +22,7 @@ export default function stats() {
             <Subnav />
             <section className="p-5 stats-content">
                 <div className="container">
-                    <Globalstats />
+                    <DynamicGlobalStats />
                 </div>
             </section>
             <Status />

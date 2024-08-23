@@ -1,3 +1,5 @@
+"use-client"
+
 import React from "react";
 import Admins from "./components/team/admins";
 import Management from "./components/team/management";

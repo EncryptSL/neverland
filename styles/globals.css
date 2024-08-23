@@ -8,7 +8,9 @@ body::before {
 }
 
 .bg-header {
-  background: url(/assets/header-background.webp) no-repeat center;
+  background-image: url('/assets/header-background.webp');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .avatar {
@@ -57,7 +59,10 @@ body::before {
 
 .stats-hero {
   text-transform: uppercase;
-  background: url(/assets/stats_wallpaper.webp) repeat center;
+  background-image: url('/assets/stats_wallpaper.webp');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 .stats-primary-title {
@@ -216,7 +221,7 @@ button:hover {
 }
 
 .shop {
-  background: url('/assets/shop_bg.webp');
+  background-image: url('/assets/shop_bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
 }

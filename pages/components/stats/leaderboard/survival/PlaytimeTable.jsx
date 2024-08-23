@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image"
+import Avatar from "../../../avatar"
 
 const PlaytimeTable = ({data}) => {
     return (
@@ -15,11 +15,11 @@ const PlaytimeTable = ({data}) => {
             </thead>
             <tbody>
                 {
-                    data && data.playedtimes.map(e => {
+                    data && data.playedtimes.map((e, index) => {
                         return (
-                            <tr key={e?.id}>
+                            <tr key={index}>
                                 <th>{e?.id}</th>
-                                <th><Image src={"https://visage.surgeplay.com/face/" + e?.uuid} decoding="async" alt={e?.username} title={e?.username} width="24" height="24" /> {e?.username}</th>
+                                <th><Avatar id={e?.uuid} alt={e?.username} width={24} height={24} />{e?.username}</th>
                                 <td>{e?.playedtime}</td>
                                 <td>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(e?.first_join))}</td>
                                 <td>{new Intl.DateTimeFormat('cs-CZ', { dateStyle: 'full', timeStyle: 'short'}).format(new Date(e?.last_join))}</td>
