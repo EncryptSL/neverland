@@ -1,5 +1,4 @@
 import Subnav from "../../components/stats/subnav";
-import axios from "axios";
 import Status from "../../components/status/status";
 import dynamic from "next/dynamic";
 import Loading from "../../components/ui/loading";
