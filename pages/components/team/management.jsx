@@ -16,10 +16,10 @@ const Management = () => {
                     return (<div className="col-md-4 my-2" key={record.id}>
                             <div className="card text-bg-secondary mb-3">
                                 <div className="card-body grow">
-                                  <Image className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} loading="lazy" alt={record.uuid} height={150} width={150} />
+                                  <Image className={record.background} src={`https://visage.surgeplay.com/bust/${record.uuid}.png?y=-40`} priority quality={50} alt={record.uuid} height={150} width={150} />
                                   <h5 className="card-title">{record.username}</h5>
-                                  <Badge color={record.badge_color} text={record.badge_text} />
-                                  <p><blockquote className="blockquote">{record?.description}</blockquote></p>
+                                  <Badge color={record?.badge_color} text={record?.badge_text} />
+                                  <blockquote className="blockquote"><p>{record?.description}</p></blockquote>
                                 </div>
                             </div>
                         </div>

@@ -22,7 +22,7 @@ export default function Player({player}) {
                     <div className="row">
                         <div className="col-md-8 d-md-flex align-items-md-center">
                             <div className="py-4 py-md-0">
-                                <div className="font-size-h2 mb-2">
+                                <div className="font-size-h2 mb-2 text-white">
                                     <h1>{player.username}</h1>
                                 </div>
                                 <div className="mb-0">

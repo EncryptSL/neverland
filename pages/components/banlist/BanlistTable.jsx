@@ -1,9 +1,9 @@
 import BanBadges from "../ui/ban-badges"
 import Avatar from "../avatar"
 
-export default function BanlistTable({data}) {
+export default function BanlistTable({entries}) {
     return (
-        <table className="table table-striped table-hover">
+        <table className="table table-striped table-hover text-center">
             <thead>
                 <tr>
                   <th scope="col">Hráč</th>
@@ -15,7 +15,7 @@ export default function BanlistTable({data}) {
             </thead>
             <tbody>
                 {
-                    data && data.bans.map((e, index) => {
+                    entries && entries.map((e, index) => {
                         return (
                             <tr key={index}>
                                 <th><Avatar id={e?.uuid} alt={e?.username} width={24} height={24} /></th>

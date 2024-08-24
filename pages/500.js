@@ -13,7 +13,7 @@ export default function Custom500() {
                         </div>
                     </div>
                     <div className="col-lg-6 d-flex">
-                        <Image src={"/assets/404.png"} decoding="async" alt="404" height={350} width={350} title="404 - Not found" quality={50} style={{transform: rotate('-12deg')}} />
+                        <Image src={"/assets/500.png"} decoding="async" alt="404" height={350} width={350} title="404 - Not found" quality={50} style={{transform: rotate('-12deg')}} />
                     </div>
                 </div>
             </div>

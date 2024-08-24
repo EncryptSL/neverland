@@ -34,15 +34,15 @@ export function ServerStatus({status}) {
     </section>
   )
 }
-
 export default function Status() {
-  const [status, setData] = useState(null)
+
+  const [status, setStatus] = useState(null)
   const [isLoading, setLoading] = useState(false)
 
   useEffect(() => {
     setLoading(true)
-    fetch("https://api.mcstatus.io/v2/status/java/salmon.hostify.cz:51090").then((res) => res.json()).then((status) => {
-      setData(status)
+    getServerStatus().then((response) => response.json()).then((status) => {
+      setStatus(status)
       setLoading(false)
     })
   }, [])
@@ -67,3 +67,7 @@ export default function Status() {
       )
   }
 };
+
+export function getServerStatus() {
+  return fetch("https://api.mcstatus.io/v2/status/java/salmon.hostify.cz:51090")
+}
