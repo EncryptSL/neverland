@@ -22,7 +22,7 @@ export default function Vote() {
                         <form className="flex flex-col" method="post" onSubmit={submitVote}>
                             <label htmlFor="service">Kde chceš Hlasovat
                               <select id="service" className="form-select" name="service" aria-label="service" required>
-                                  <option disabled={false} value={""}>Vyber prosím službu</option>
+                                  <option disabled={false} value={""} defaultChecked={true}>Vyber prosím službu</option>
                                   <option value="czech-craft">Czech-Craft</option>
                                   <option value="craftlist">Craftlist</option>
                               </select>
@@ -45,16 +45,12 @@ export default function Vote() {
                             <li>Pokud hlasujete a nejste na serveru nebojte se vaše odměny se ukládají.</li>
                             <li>Každý hlas se počítá a za některý počet hlasů můžete dostat bonusové odměny.</li>
                             <li>Hlasováním můžete také, spustit vote party, tato akce se spouští pokud je na serveru 100 hlasů.</li>
-                            <li>Odměnu si můžete vyzvednout pomocí /vote reward claim.</li>
+                            <li>Odměnu si můžete vyzvednout pomocí /trezor claim.</li>
                         </ul>
-                        <ul className="nav">
-                            <li className="nav-item">
-                              <a className="nav-link" href="https://czech-craft.eu/server/neveland/"><Image src="https://czech-craft.eu/api/server/neveland/badges/position.svg" priority={1} quality={3} decoding="async" alt="czechcraft" width={"87"} height={"27"} /></a>
-                            </li>
-                            <li className="nav-item">
-                              <a className="nav-link" href="https://craftlist.org/neverland"><Image src="https://craftlist.org/server-icons/ranks/small/2033.png" priority={1} quality={3} decoding="async" alt="craftlist" width={"87"} height={"27"} /></a>
-                            </li>
-                        </ul>
+                        <div className="d-flex gap-2 align-items-center">
+                          <a className="nav-link" href="https://czech-craft.eu/server/neveland/"><Image src="https://czech-craft.eu/api/server/neveland/badges/position.svg" priority={1} quality={3} decoding="async" alt="czechcraft" width={"87"} height={"27"} /></a>
+                          <a className="nav-link" href="https://craftlist.org/neverland"><Image src="https://craftlist.org/server-icons/ranks/small/2033.png" priority={1} quality={3} decoding="async" alt="craftlist" width={"87"} height={"27"} /></a>
+                        </div>
                     </div>
                 </div>
             </div>           

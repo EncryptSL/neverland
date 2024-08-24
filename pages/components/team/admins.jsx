@@ -13,7 +13,7 @@ const Admins = () => {
         <>
             <h2 className="mb-0 text-center text-white">Administrátoři</h2>
             <div className="row mb-4 justify-content-center text-center">
-                { data ? data["admins"].map(record => {
+                { data && data["admins"].map(record => {
                     <div className="col-md-4 my-2" key={record.id}>
                         <div className="card text-bg-secondary mb-3">
                             <div className="card-body">
@@ -24,7 +24,7 @@ const Admins = () => {
                             </div>
                         </div>
                     </div>
-                }) : <Loading /> }
+                })}
             </div>
         </>
     )

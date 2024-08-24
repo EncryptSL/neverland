@@ -12,7 +12,7 @@ export default function Moderators() {
         <>
             <h2 className="mb-0 text-center text-dark">Moderátoři</h2>
             <div className="row mb-4 justify-content-center text-center">
-            {data ? data["moderators"].map(record => {
+            {data && data["moderators"].map(record => {
                     return (<div className="col-md-4 my-2" key={record.id}>
                         <div className="card text-bg-secondary mb-3">
                             <div className="card-body grow">
@@ -23,7 +23,7 @@ export default function Moderators() {
                             </div>
                         </div>
                     </div>
-             )}) : <Loading />}
+             )})}
             </div>
         </>
     )

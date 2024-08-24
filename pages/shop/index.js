@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Subnav from "../components/shop/subnav";
 import {getCategories} from "../../libs/shop/categories"
 import Status from "../components/status/status";
+import Loading from "../components/ui/loading";
 
 export default function shop({categories}) {
   return (
@@ -14,11 +15,13 @@ export default function shop({categories}) {
               </div>
               <h1 className="title">SHOP KATEGORIE</h1>
               <div className="row justify-content-center text-center">
+                <Suspense fallback={<Loading />}>
                 {categories.map(data => (
                     <div className="col-lg-3 mb-3 grow" key={data.id}>
                         <a href={data.url}><img src={data.thumbnail} className="card-img-top" alt={"img-" + data.title} style={{width:100 + '%!important'}} /></a>
                     </div>
                 ))}
+                </Suspense>
               </div>
           </div>
       </section>

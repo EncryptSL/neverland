@@ -1,10 +1,11 @@
 "use-client"
 
-import React from "react";
+import React, { Suspense } from "react";
 import Admins from "./components/team/admins";
 import Management from "./components/team/management";
 import Moderators from "./components/team/moderators";
 import Status from "./components/status/status";
+import Loading from "./components/ui/loading";
 
 export default function team() {
     return (
@@ -18,10 +19,12 @@ export default function team() {
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
-                        <Management />
-                        <Moderators />
-                    </div>
+                    <Suspense fallback={<Loading />}>
+                        <div className="row justify-content-center">
+                            <Management />
+                            <Moderators />
+                        </div>
+                    </Suspense>
                 </div>
             </section>
             <Status />

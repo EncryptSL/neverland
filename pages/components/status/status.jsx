@@ -69,5 +69,5 @@ export default function Status() {
 };
 
 export function getServerStatus() {
-  return fetch("https://api.mcstatus.io/v2/status/java/salmon.hostify.cz:51090")
+  return fetch("https://api.mcstatus.io/v2/status/java/salmon.hostify.cz:51090", { next: { revalidate: 1 } })
 }
